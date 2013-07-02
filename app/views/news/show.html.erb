@@ -1,0 +1,13 @@
+<% if @all_news.count == 0%>
+	<p>Ancora nesseuna news</p>
+<% else %>
+	<% @all_news.each do |n| %>
+		<div class="alert alert-success">
+			<p><%= n.title %></p>
+			<p><%= n.body %></p>
+			<%= link_to "Edit", controller: :news, action: :edit , :news_id => n.id %>
+			<%= link_to "Delete", controller: :news, action: :delete , :news_id => n.id %>
+		</div>
+	<% end %>
+<% end %> 
+<%= link_to "Nuova", controller: :news, action: :new %>

@@ -1,0 +1,8 @@
+<h1>Editing News</h1>
+<%= form_for :news, url: {controller: :news, action: :create} do |n| %>
+    Title: <%= n.text_field :title %><br />
+    Body: <%= n.text_area :body %><br />
+    Author: <%= n.text_field :author %><br />
+    Image URL: <%= n.text_field :image_url %><br />
+    <%= n.submit "Save" %>
+<% end%>
