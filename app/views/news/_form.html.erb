@@ -1,9 +1,9 @@
 <div class="well">
 <%= form_for :news, url: {controller: :news, action: :create} do |f| %>
   <%= f.text_field :title, placeholder: "Title.." %><br />
-  <%= f.text_area :body, placeholder: "Text..", cols:30, rows:5 %><br />
-  <%= f.text_field :image_url,:placeholder => "Image Url.."%><br />
+  <%= f.text_field :image_url,:placeholder => "Image Url.."%>
   <%= f.text_field :author,:placeholder => "Author.."%><br />
+  <%= f.text_area :body, placeholder: "Text..", cols:700, rows:10 %><br />
   <div class="actions">
     <%= f.submit %>
   </div>

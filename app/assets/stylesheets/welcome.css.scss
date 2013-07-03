@@ -1,3 +1,115 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+html, body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#full-screen-background-image {
+  z-index: -999;
+  min-height: 100%;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#wrapper {
+  position: relative;
+  min-height: 400px;
+}
+
+.center{
+	text-align:center
+}
+
+.imageContainer{
+	max-width:200px;
+	float:left;
+	margin: 10px;
+}
+
+.prev{
+	float:  right;
+}
+
+.banner{
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+.header{
+	width: 100%;
+	margin: 0px;
+}
+
+.carosello{
+	max-height: 100px;
+}
+
+.notizia{
+	padding: 2px;
+}
+
+.data{
+	color: #999999;
+}
+
+.titolo{
+	font-family: 'Cabin Condensed', sans-serif;
+	font-size: 20px;
+}
+
+.margine{
+	margin: 5%;
+}
+
+div.textimage{
+	margin-bottom: 10px;     
+}
+
+div.post-header{
+	margin:0 10px;
+	padding: 0;
+	margin-top: 10px;
+}
+
+div.textimage p{
+	margin:0 10px;
+	padding: 0
+}
+
+div.clearer{clear: left}
+
+.principale{
+	width: 80%;
+    background-color:#FFFFFF;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px;
+}
+
+.navbar-inner {
+    border-radius: 0px !important;
+}
+
+.sponsor{
+	width: 80%;
+	margin-left: auto;
+    margin-right: auto;
+    padding: 0px;	
+}
+
+.mipiace{
+	width: 80%;
+	margin-left: auto;
+    margin-right: auto;
+    padding: 0px;
+}

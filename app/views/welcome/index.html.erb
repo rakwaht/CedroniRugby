@@ -1,5 +1,5 @@
 <div class="row-fluid">
-	<div class="span12">
+	<div class="offset1 span10">
 		<div id="myCarousel" class="carousel slide">
 	  		<ol class="carousel-indicators">
 	    		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -8,9 +8,27 @@
 	  		</ol>
 	  		<!-- Carousel items -->
 	  		<div class="carousel-inner">
-	    		<div class="active item"><%=image_tag("carousel1.jpg")%></div>
-	    		<div class="item"><%=image_tag("carousel2.jpg")%></div>
-	    		<div class="item"><%=image_tag("carousel3.jpg")%></div>
+	    		<div class="active item">
+	    			<%=image_tag("carousel1.jpg")%>
+	    			<div class="carousel-caption">
+	    				<h4>Squadra Maschile</h4>
+	    				<p>Foto Cedroni Rugby dopo la prima amichevole</p>
+	    			</div>
+	    		</div>
+	    		<div class="item">
+	    			<%=image_tag("carousel2.jpg")%>
+	    			<div class="carousel-caption">
+	    				<h4>Cedroni e Sirena</h4>
+	    				<p>Foto Cedroni Rugby insieme a SirenaOltrefersina</p>
+	    			</div>
+	    		</div>
+	    		<div class="item">
+	    			<%=image_tag("carousel3.jpg")%>
+	    			<div class="carousel-caption">
+	    				<h4>Squadra Femminile</h4>
+	    				<p>Foto ragazze della cedroni femminile e lagaria rugby femminile</p>
+	    			</div>
+	    		</div>
 	  		</div>
 	  		<!-- Carousel nav -->
 	  		<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
@@ -18,7 +36,59 @@
 		</div>
 	</div>
 </div>
-<div class="">
-			<p>I cedroni si allenano tutti i martedi e venerdi alle ore 20:00</p>
-			<p>Vieni a provare!</p>
+<hr>
+<div class="row-fluid">
+ <div class="span8">
+	<div class="center">
+		<h2>Ultime News:</h2>
+	</div>
+	<% @all_news.each do |n|%>
+		<div class="notizia margine">
+			<% if n.image_url.empty? == false %>
+				<div class="row-fluid textimage">			
+					<div class="imageContainer">
+						<img src="<%= n.image_url %>" >
+					</div>
+					<div class="testonews">
+						<div class="post-header">
+							<span class="data"><%=n.created_at.strftime("%Y-%m-%d") %></span>
+							&nbsp
+							<span class="titolo"><%= n.title %></span>
+						</div>
+						<p><%= n.body %></p>
+					</div>
+					<div class=”clearer”> </div>
+				</div>
+			<%else%>
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="prev">
+							<%= n.prew %>
+						</div>
+					</div>
+				</div>
+			<%end%>
+		</div>
+	<% end %>
+ </div>
+ <div class="span4">
+ 	<div class="laterale">
+ 	 <div class="mipiace">
+ 		<br /><br /><br />
+ 		<h5>Seguici anche su Facebook:</h5>
+ 		<div class="fb-like" data-href="https://www.facebook.com/pages/Rugby-Cedroni/192585904157831?fref=ts" data-send="false" data-width="100%" data-show-faces="true" data-font="verdana"></div>
+ 	 </div>
+ 	 <br /><br /><br />
+ 	 <div class="sponsor">
+ 	 	<h5>Un ringraziamento particolare ai nostri sponsor:</h5>
+         <a href="http://www.essetp.it/" target="_blank"><%= image_tag("stp-logo.jpg")%></a>
+        <br /><br /><br />
+        <a href="http://www.essetp.it/" target="_blank"><%= image_tag("stp-logo.jpg")%></a>
+        <br /><br /><br />
+        <a href="http://www.essetp.it/" target="_blank"><%= image_tag("stp-logo.jpg")%></a>
+        <br /><br /><br />
+        <a href="http://www.essetp.it/" target="_blank"><%= image_tag("stp-logo.jpg")%></a>
+  	 </div>
+ 	</div>
+ </div>
 </div>

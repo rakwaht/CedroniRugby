@@ -11,14 +11,3 @@
  *= require_self
  *= require_tree .
  */
-
-body { padding-top: 40px; }
-@media screen and (max-width: 768px) {
-    body { padding-top: 0px; }
-}
-
-.banner{
-  background: url(assets/image/banner.jpg) no-repeat left center;
-  height: 20px;
-  width: 100px;
-}

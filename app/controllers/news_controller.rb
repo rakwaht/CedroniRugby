@@ -12,7 +12,7 @@ class NewsController < ApplicationController
     	end
 	end
 
-	def show
+	def archive
 		@all_news = News.all(:order => "created_at DESC")
 	end
 
@@ -25,6 +25,10 @@ class NewsController < ApplicationController
 		@news = News.find(params[:news_id])
 		@news.destroy
 		redirect_to controller: :news, action: :show
+	end
+
+	def show
+		@news = News.find(params[:news_id]);
 	end
 
 end

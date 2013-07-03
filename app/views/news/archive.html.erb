@@ -1,0 +1,18 @@
+<div class="post-header">
+	<h2>Archivio News:</h2>
+</div>
+<%@all_news.each do |n| %>
+	<div class="post-header">
+		<span class="data"><%=n.created_at.strftime("%Y-%m-%d") %></span>
+		&nbsp
+		<%= link_to controller: :news, action: :show, :news_id => n.id do %>
+			<span class="titolo"><%= n.title %></span>
+		<%end%>
+		<span>
+			<%= link_to "Edit", controller: :news, action: :edit , :news_id => n.id %>
+			<%= link_to "Delete", controller: :news, action: :delete , :news_id => n.id %>
+		</span>
+	</div>
+<% end %>
+<br /><br />
+<%= link_to "Nuova", controller: :news, action: :new %>

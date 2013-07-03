@@ -1,13 +1,26 @@
-<% if @all_news.count == 0%>
-	<p>Ancora nesseuna news</p>
-<% else %>
-	<% @all_news.each do |n| %>
-		<div class="alert alert-success">
-			<p><%= n.title %></p>
-			<p><%= n.body %></p>
-			<%= link_to "Edit", controller: :news, action: :edit , :news_id => n.id %>
-			<%= link_to "Delete", controller: :news, action: :delete , :news_id => n.id %>
+<div class="notizia margine">
+	<% if @news.image_url.empty? == false %>
+		<div class="row-fluid textimage">			
+			<div class="imageContainer">
+				<img src="<%= @news.image_url %>" >
+			</div>
+			<div class="testonews">
+				<div class="post-header">
+					<span class="data"><%=@news.created_at.strftime("%Y-%m-%d") %></span>
+					&nbsp
+					<span class="titolo"><%= @news.title %></span>
+				</div>
+				<p><%= @news.body %></p>
+			</div>
+			<div class=”clearer”> </div>
 		</div>
-	<% end %>
-<% end %> 
-<%= link_to "Nuova", controller: :news, action: :new %>
+	<%else%>
+		<div class="row-fluid">
+			<div class="span12">
+				<div class="prev">
+					<%= @news.body %>
+				</div>
+			</div>
+		</div>
+	<%end%>
+</div>
