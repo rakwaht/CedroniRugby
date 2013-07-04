@@ -4,7 +4,6 @@
 	<div class="post-header">
 		<h2>Archivio News:</h2>
 	</div>
-	<% if @all_news.count > 0 %>
 		<% if @topic.nil? %>
 			<%= render 'all' %>
 		<% elsif @topic == "Maschile" %>
@@ -15,7 +14,6 @@
 			<%= render 'societa' %>
 		<% end %>
 		<br /><br />
-	<% end %>
   </div>
  </div>
  <div class="span2">
