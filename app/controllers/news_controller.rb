@@ -8,7 +8,7 @@ class NewsController < ApplicationController
     	if @news.save
       		redirect_to controller: :welcome, action: :admin
     	else 
-      		redirect_to action: :new
+      		redirect_to controller: :news,action: :new
     	end
 	end
 
