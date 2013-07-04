@@ -1,4 +1,5 @@
 class WelcomeController < ApplicationController
+	
 	def index
 		@all_news = News.find(:all, :order => "created_at DESC", :limit => 3)
 	end
@@ -24,4 +25,5 @@ class WelcomeController < ApplicationController
 
 	def galleria
 	end
+
 end

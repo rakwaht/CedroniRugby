@@ -62,9 +62,15 @@
 			<%else%>
 				<div class="row-fluid">
 					<div class="span12">
-						<div class="prev">
-							<%= n.prew %>
+						<div class="testonews">
+						<div class="post-header">
+							<span class="data"><%=n.created_at.strftime("%Y-%m-%d") %></span>
+							&nbsp
+							<span class="titolo"><%= n.title %></span>
 						</div>
+						<p><%= n.body %></p>
+					</div>
+					<div class=”clearer”> </div>
 					</div>
 				</div>
 			<%end%>
