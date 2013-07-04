@@ -19,16 +19,16 @@
  <div class="span2">
  	<h5>Filtra news:</h5>
  	<%= link_to controller: :news, action: :archive do%>
- 		<p>Tutte(<%= @all_news.count %>)</p>
+ 		<div class="colored-link"><p>Tutte(<%= @all_news.count %>)</p></div>
  	<% end %>
  	<%= link_to controller: :news, action: :archive, :topic => "Maschile" do%>
- 		<p>Maschile(<%= @news_maschile.count %>)</p>
+ 		<div class="colored-link"><p>Maschile(<%= @news_maschile.count %>)</p></div>
  	<% end %>
  	<%= link_to controller: :news, action: :archive, :topic => "Femminile" do%>
- 		<p>Femminile(<%= @news_femminile.count %>)</p>
+ 		<div class="colored-link"><p>Femminile(<%= @news_femminile.count %>)</p></div>
  	<% end %>
  	<%= link_to controller: :news, action: :archive , :topic => "Societa" do%>
- 		<p>Societa(<%= @news_societa.count %>)</p>
+ 		<div class="colored-link"><p>Societa(<%= @news_societa.count %>)</p></div>
  	<% end %>
  </div>
 </div>

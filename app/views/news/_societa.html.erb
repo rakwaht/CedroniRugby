@@ -1,5 +1,5 @@
 <% if @news_societa.count == 0 %>
-	<div class="alert alert-error principale">
+	<div class="alert alert-success principale">
       <h2><strong><center>Non sono presenti news di questo tipo!</center></strong></h2>
     </div>
 <% else %>
@@ -8,7 +8,7 @@
 				<span class="data"><%=n.created_at.strftime("%Y-%m-%d") %></span>
 				&nbsp
 				<%= link_to controller: :news, action: :show, :news_id => n.id do %>
-					<span class="titolo"><%= n.title %></span>
+					<span class="titolo colored-link"><%= n.title %></span>
 				<%end%>
 			</div>
 	<% end %>
