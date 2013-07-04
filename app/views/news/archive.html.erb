@@ -1,18 +1,34 @@
-<div class="post-header">
-	<h2>Archivio News:</h2>
-</div>
-<%@all_news.each do |n| %>
+<div class="row-fluid">
+ <div class="span10">
+  <div class="principale">
 	<div class="post-header">
-		<span class="data"><%=n.created_at.strftime("%Y-%m-%d") %></span>
-		&nbsp
-		<%= link_to controller: :news, action: :show, :news_id => n.id do %>
-			<span class="titolo"><%= n.title %></span>
-		<%end%>
-		<span>
-			<%= link_to "Edit", controller: :news, action: :edit , :news_id => n.id %>
-			<%= link_to "Delete", controller: :news, action: :delete , :news_id => n.id %>
-		</span>
+		<h2>Archivio News:</h2>
 	</div>
-<% end %>
-<br /><br />
-<%= link_to "Nuova", controller: :news, action: :new %>
+	<% if @topic.nil? %>
+		<%= render 'all' %>
+	<% elsif @topic == "Maschile" %>
+		<%= render 'maschile' %>
+	<% elsif @topic == "Femminile" %>
+		<%= render 'femminile' %>
+	<% else %>
+		<%= render 'societa' %>
+	<% end %>
+	<br /><br />
+   </div>
+ </div>
+ <div class="span2">
+ 	<h5>Filtra news:</h5>
+ 	<%= link_to controller: :news, action: :archive do%>
+ 		<p>Tutte(<%= @all_news.count %>)</p>
+ 	<% end %>
+ 	<%= link_to controller: :news, action: :archive, :topic => "Maschile" do%>
+ 		<p>Maschile(<%= @news_maschile.count %>)</p>
+ 	<% end %>
+ 	<%= link_to controller: :news, action: :archive, :topic => "Femminile" do%>
+ 		<p>Femminile(<%= @news_femminile.count %>)</p>
+ 	<% end %>
+ 	<%= link_to controller: :news, action: :archive , :topic => "Societa" do%>
+ 		<p>Societa(<%= @news_societa.count %>)</p>
+ 	<% end %>
+ </div>
+</div>

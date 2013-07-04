@@ -2,7 +2,7 @@
 <%= form_for :news, url: {controller: :news, action: :create} do |n| %>
     Title: <%= n.text_field :title %><br />
     Body: <%= n.text_area :body %><br />
-    Author: <%= n.text_field :author %><br />
     Image URL: <%= n.text_field :image_url %><br />
+    Argomento: <%= n.select :topic, options_for_select(["Maschile","Femminile","Societa"])%><br />
     <%= n.submit "Save" %>
 <% end%>

@@ -6,14 +6,18 @@ class NewsController < ApplicationController
 	def create
 		@news = News.new(params[:news])
     	if @news.save
-      		redirect_to controller: :news, action: :show
+      		redirect_to controller: :welcome, action: :admin
     	else 
       		redirect_to action: :new
     	end
 	end
 
 	def archive
+		@topic = params[:topic]
 		@all_news = News.all(:order => "created_at DESC")
+		@news_maschile = News.where(:topic => "Maschile");
+		@news_femminile = News.where(:topic => "Femminile");
+		@news_societa = News.where(:topic => "Societa");
 	end
 
 	def edit
@@ -24,7 +28,7 @@ class NewsController < ApplicationController
 	def delete
 		@news = News.find(params[:news_id])
 		@news.destroy
-		redirect_to controller: :news, action: :show
+		redirect_to controller: :welcome, action: :admin
 	end
 
 	def show

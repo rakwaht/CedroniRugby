@@ -57,6 +57,7 @@
                     </ul>
                 </li>
                 <li><%= link_to "Gioca Con Noi", controller: :welcome, action: :gioca  %></li>
+                <li><%= link_to "Galleria", controller: :welcome, action: :galleria  %></li>
                 <li><%= link_to "Contatti", controller: :welcome, action: :contatti  %></li>
               </ul>
             </div><!--/.nav-collapse -->
@@ -69,7 +70,8 @@
       <hr>
       <footer>
         <p>&copy; Rakwaht 2013</p>
-       </footer>
+        <%= link_to "AdminArea", controller: :welcome, action: :admin %>
+      </footer>
     </div> <!-- /container -->
 
     <!-- Javascripts

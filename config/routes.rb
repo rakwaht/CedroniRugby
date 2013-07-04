@@ -9,6 +9,10 @@ Cedroni::Application.routes.draw do
   get "femminile" => "welcome#femminile"
   get "contatti" => "welcome#contatti"
   get "gioca_con_noi" => "welcome#gioca"
+  get "galleria" => "welcome#galleria"
+
+  #admin
+  get "admin" => "welcome#admin"
 
   #root to news
   get "news/new" => "news#new"

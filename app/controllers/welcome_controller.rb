@@ -17,4 +17,11 @@ class WelcomeController < ApplicationController
 
 	def gioca
 	end
+
+	def admin
+		@all_news = News.all(:order => "created_at DESC")
+	end
+
+	def galleria
+	end
 end
