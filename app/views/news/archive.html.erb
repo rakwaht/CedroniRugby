@@ -4,17 +4,19 @@
 	<div class="post-header">
 		<h2>Archivio News:</h2>
 	</div>
-	<% if @topic.nil? %>
-		<%= render 'all' %>
-	<% elsif @topic == "Maschile" %>
-		<%= render 'maschile' %>
-	<% elsif @topic == "Femminile" %>
-		<%= render 'femminile' %>
-	<% else %>
-		<%= render 'societa' %>
+	<% if @all_news.count > 0 %>
+		<% if @topic.nil? %>
+			<%= render 'all' %>
+		<% elsif @topic == "Maschile" %>
+			<%= render 'maschile' %>
+		<% elsif @topic == "Femminile" %>
+			<%= render 'femminile' %>
+		<% else %>
+			<%= render 'societa' %>
+		<% end %>
+		<br /><br />
 	<% end %>
-	<br /><br />
-   </div>
+  </div>
  </div>
  <div class="span2">
  	<h5>Filtra news:</h5>
