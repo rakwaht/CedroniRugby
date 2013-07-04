@@ -41,7 +41,7 @@
             </a>
             <%= link_to '<div class="brand">CedroniRugby</div>'.html_safe, controller: :welcome, action: :index %>
             <div class="container nav-collapse">
-              <ul class="nav">
+              <ul class="nav pull-right">
                 <li><%= link_to "News", controller: :news, action: :archive %></li>
                 <li><%= link_to "Società", controller: :welcome, action: :societa  %></li>
                 <li><ul class="nav">
@@ -67,10 +67,15 @@
 
       <%= bootstrap_flash %>
       <%= yield %>
+      <%= link_to "AdminArea", controller: :welcome, action: :admin %>
       <hr>
       <footer>
-        <p>&copy; Rakwaht 2013</p>
-        <%= link_to "AdminArea", controller: :welcome, action: :admin %>
+        <div class="row-fluid center foot">
+          <br />
+          <p>"&copy; Rakwaht 2013 - Built with 
+          <a style="color:#08C" href="http://rubyonrails.org/" target="blank">Ruby on Rails</a>"</p>
+          <br />
+        </div>
       </footer>
     </div> <!-- /container -->
 
