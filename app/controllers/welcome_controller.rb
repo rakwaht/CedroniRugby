@@ -21,9 +21,23 @@ class WelcomeController < ApplicationController
 
 	def admin
 		@all_news = News.all(:order => "created_at DESC")
+		@all_album = Album.all(:order => "created_at DESC")
 	end
 
 	def galleria
+		@all_album = Album.all(:order => "created_at DESC")
+	end
+
+	def left
+		respond_to do |format|
+      		format.js {render action: :next}
+    	end
+	end
+
+	def right
+		respond_to do |format|
+      		format.js {render action: :prew}
+    	end
 	end
 
 end

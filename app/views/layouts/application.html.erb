@@ -26,10 +26,10 @@
       }(document, 'script', 'facebook-jssdk'));
       </script>
     <img src="<%=asset_path("background.jpg") %>" id="full-screen-background-image">
-    <div class="container well principale wrapper">
+    <div class="container principale wrapper">
       <div class="header">
         <div class="banner">
-          <%=image_tag("banner2.png")%>
+          <%=image_tag("banner.png")%>
         </div>
         <div class="navbar">
           <div class="navbar-inner">
@@ -64,10 +64,8 @@
           </div>
         </div>
       </div>
-
       <%= bootstrap_flash %>
       <%= yield %>
-      <%= link_to "AdminArea", controller: :welcome, action: :admin %>
       <hr>
       <footer>
         <div class="row-fluid center foot">

@@ -1,0 +1,7 @@
+<h2><%=@album.title%></h2>
+<h5><%=@album.description%></h5>
+<% @album.photos.each do |p| %>
+	<p><%= p.image_url %></p>
+<% end %>
+<p><%= link_to "Aggiungi photo", controller: :photos, action: :new, :album_id => @album.id %></p>
+<p><%= link_to "Admin", controller: :welcome, action: :admin %></p>

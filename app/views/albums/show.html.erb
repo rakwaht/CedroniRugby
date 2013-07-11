@@ -1,0 +1,8 @@
+<div class="row-fluid center principale">	
+	<h5><%=@album.title%></h5>
+	<ul class="thumbnails">
+		<% @album.photos.each do |p| %>	
+			<li class="thumbnail"><div class="contenitore"><img src="<%= p.image_url %>" alt=""></div></li>
+		<% end %>
+	</ul>
+</div>

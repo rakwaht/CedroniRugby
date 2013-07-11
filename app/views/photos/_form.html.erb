@@ -1,0 +1,6 @@
+<%=form_for :photo, url: {controller: :photos, action: :create, :album_id => @album.id} do |f|%>
+  <%= f.text_field :image_url, placeholder: "URL.." %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

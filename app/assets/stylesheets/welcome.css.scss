@@ -48,6 +48,7 @@ html, body {
 .header{
 	width: 100%;
 	margin: 0px;
+	padding: 0px;
 }
 
 .carosello{
@@ -90,10 +91,10 @@ div.clearer{clear: left}
 
 .principale{
 	width: 80%;
-    background-color:#FFFFFF;
     margin-left: auto;
     margin-right: auto;
     padding: 0px;
+    background-color: #fff;
 }
 
 @media screen and (max-width: 768px) {
@@ -144,4 +145,33 @@ div.clearer{clear: left}
 .item > img{
 	width: 100%;
   	max-height: 350px;
+}
+
+.imageGallery{
+	width:auto;
+	height: 150px;
+	margin: 10px;	
+}
+
+.contenitore{
+	width: 250px;
+    height: 170px;
+    display: table-cell; 
+    vertical-align: middle; 
+    text-align: center;
+}
+
+.contenitore img {
+	max-width: 100%;
+    max-height: 100%;
+}
+
+.invisibile{
+	display: none;
+}
+
+.squadra img{
+	height: 80px;
+	width:auto;
+	max-width: 100%;
 }

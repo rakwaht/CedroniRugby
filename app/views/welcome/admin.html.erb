@@ -21,4 +21,14 @@
 	<% end %>
  <% end %>
 <br /><br />
-<%= link_to "Nuova", controller: :news, action: :new %>
+<%= link_to "Nuova News", controller: :news, action: :new %>
+<hr>
+<p>Albums:</p>
+	<% @all_album.each do |a| %>
+		<%= link_to controller: :albums, action: :show_admin, :album_id => a.id do %>
+				<span class="titolo"><%= a.title %></span>
+		<%end%>
+		<%= link_to "Delete", controller: :albums, action: :delete , :album_id => a.id %>
+		<br />
+	<% end %>
+<%= link_to "Nuovo Album", controller: :albums, action: :new %>

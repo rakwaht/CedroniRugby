@@ -1,1 +1,19 @@
 <h1>Gallery</h1>
+<% @all_album.each do |a|%>
+	<div class="row-fluid textimage">			
+		<div class="imageContainer">
+			<img src="<%= a.photos.first.image_url %>" >
+		</div>
+		<div class="testonews">
+			<div class="post-header">
+				<span class="data"><%=a.created_at.strftime("%Y-%m-%d") %></span>
+				&nbsp
+				<%= link_to controller: :albums, action: :show, :album_id => a.id do %>
+					<span class="titolo colored-link"><%= a.title %></span>
+				<%end%>
+			</div>
+			<p><%= a.description %></p>
+		</div>
+		<div class=”clearer”> </div>
+	</div>
+<% end %>

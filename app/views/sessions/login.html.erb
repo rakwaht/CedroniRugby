@@ -1,0 +1,7 @@
+<%= form_for :user, url:{controller: :sessions, action: :create} do |u| %>
+	<%= u.text_field :name, :placeholder => "Name" %><br />
+	<%= u.password_field :password, :placeholder => "Password" %><br /> 
+	<%= u.submit :login%>
+<% end %>
+
+<%= link_to 'logout', controller: :sessions, action: :logout %>

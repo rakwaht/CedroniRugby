@@ -1,0 +1,7 @@
+<%= form_for :album, url: {controller: :albums, action: :create} do |f| %>
+  <p>Titolo Album:  <%= f.text_field :title, placeholder: "Title.." %></p>
+  <p>Descrizione:</p> <%= f.text_area :description, placeholder: "Text.."%><br />
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

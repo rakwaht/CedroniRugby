@@ -1,0 +1,10 @@
+var active = $(".calendario").children(".attivo");
+var id = active.attr("id");
+active.removeClass("attivo");
+active.addClass("invisibile");
+if (id == 0) {
+	$("#2").removeClass("invisibile").addClass("attivo");	
+	}
+else{
+	$("#"+(id-1)).removeClass("invisibile").addClass("attivo");
+	}
