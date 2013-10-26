@@ -14,3 +14,35 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require_tree .
+
+
+//next function for the calendar
+
+$( ".icon-arrow-right" ).click(function() {
+	var active = $(".calendario").children(".attivo");
+	var id = parseInt(active.attr("id"));
+	active.removeClass("attivo");
+	active.addClass("invisibile");
+	var next_id = id + 1;
+	if(next_id == 16){
+		next_id = 0;
+	}
+	var daattivare = $("#"+ next_id);
+	daattivare.removeClass("invisibile");
+	daattivare.addClass("attivo");  
+});
+
+//prev function for the calendar
+
+$( ".icon-arrow-left" ).click(function() {
+	var active = $(".calendario").children(".attivo");
+	var id = active.attr("id");
+	active.removeClass("attivo");
+	active.addClass("invisibile");
+	if (id == 0) {
+		$("#15").removeClass("invisibile").addClass("attivo");	
+	}
+	else{
+		$("#"+(id-1)).removeClass("invisibile").addClass("attivo");
+	} 
+});

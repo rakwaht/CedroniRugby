@@ -1,7 +1,0 @@
-var active = $(".calendario").children(".attivo");
-var id = active.attr("id");
-active.removeClass("attivo");
-active.addClass("invisibile");
-var daattivare = $("#"+((id+1)%3));
-daattivare.removeClass("invisibile");
-daattivare.addClass("attivo");
