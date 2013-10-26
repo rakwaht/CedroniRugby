@@ -55,16 +55,16 @@
 							<%end%>
 						</div>
 						<p><%= n.body %></p>
+						<a href="#" 
+						  onclick="
+						    window.open(
+						      'https://www.facebook.com/sharer/sharer.php?u=http://cedronirugby.herokuapp.com<%= news_path(id: n.id) %>'+encodeURIComponent(location.href), 
+						      'facebook-share-dialog', 
+						      'width=626,height=436'); 
+						    return false;">
+						  Share on Facebook
+						</a>
 					</div>
-					<a href="#" 
-					  onclick="
-					    window.open(
-					      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 
-					      'facebook-share-dialog', 
-					      'width=626,height=436'); 
-					    return false;">
-					  Share on Facebook
-					</a>
 					<div class=”clearer”> </div>
 				</div>
 			<%else%>
@@ -79,6 +79,15 @@
 							<%end%>
 						</div>
 						<p><%= n.body %></p>
+						<a href="#" 
+						  onclick="
+						    window.open(
+						      'https://www.facebook.com/sharer/sharer.php?u=http://cedronirugby.herokuapp.com<%= news_path(id: n.id) %>'+encodeURIComponent(location.href), 
+						      'facebook-share-dialog', 
+						      'width=626,height=436'); 
+						    return false;">
+						  Share on Facebook
+						</a>
 					</div>
 					<div class=”clearer”> </div>
 					</div>

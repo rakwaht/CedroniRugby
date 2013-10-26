@@ -18,7 +18,7 @@ Cedroni::Application.routes.draw do
 
   #root to news
   get "news/new" => "news#new"
-  get "news/show" => "news#show"
+  get "news/show" => "news#show", as: "news"
   post "news/create" => "news#create"
   get "news/edit" => "news#edit"
   get "news/delete" => "news#delete"

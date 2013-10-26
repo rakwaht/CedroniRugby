@@ -11,6 +11,15 @@
 					<span class="titolo"><%= @news.title %></span>
 				</div>
 				<p><%= @news.body %></p>
+				<a href="#" 
+					  onclick="
+					    window.open(
+					      'https://www.facebook.com/sharer/sharer.php?u=http://cedronirugby.herokuapp.com<%= news_path(id: @news.id) %>'+encodeURIComponent(location.href), 
+					      'facebook-share-dialog', 
+					      'width=626,height=436'); 
+					    return false;">
+					  Share on Facebook
+					</a>
 			</div>
 			<div class=”clearer”> </div>
 		</div>
@@ -19,6 +28,15 @@
 			<div class="span12">
 				<div class="prev">
 					<%= @news.body %>
+					<a href="#" 
+					  onclick="
+					    window.open(
+					      'https://www.facebook.com/sharer/sharer.php?u=http://cedronirugby.herokuapp.com<%= news_path(id: @news.id) %>'+encodeURIComponent(location.href), 
+					      'facebook-share-dialog', 
+					      'width=626,height=436'); 
+					    return false;">
+					  Share on Facebook
+					</a>
 				</div>
 			</div>
 		</div>
