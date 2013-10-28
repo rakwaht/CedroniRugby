@@ -23,3 +23,20 @@ i.icon-arrow-right:hover {
 h7.giornata{
 	cursor: default;
 }
+
+#myModal {
+    width: 80%; /* respsonsive width */
+    margin-left:-40%; /* width/2) */
+}
+
+#galleryCarousel .item > img {
+  max-width: 100%;
+  height: 100%;
+  width: auto;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.green-background{
+    background-color: #469634;
+}

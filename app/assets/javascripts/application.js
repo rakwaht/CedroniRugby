@@ -40,3 +40,10 @@ $(".icon-arrow-left").click(function(){
 		$("#"+(id-1)).removeClass("invisibile").addClass("attivo");
 	}
 });
+
+$(".imageTrigger").click(function(){
+	var url = $(this).attr('src');
+	$(".active").removeClass("active");
+	var id = $(this).attr('id');
+	$("."+id).addClass("active");
+});
