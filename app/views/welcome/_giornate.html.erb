@@ -1,12 +1,14 @@
+
+<!-- ANDATA -->
 <div class="calendario principale">
-	<div id="0" class="giornata principale attivo">
+	<div id="0" class="giornata principale invisibile">
 	 	<div class="offset2 span8 center">
-			<%= link_to '<i class="icon-arrow-left"></i>'.html_safe, controller: :welcome, action: :left, :remote => true %>
-			<h7>Giornata 1</h7>	
-			<%= link_to '<i class="icon-arrow-right"></i>'.html_safe, controller: :welcome, action: :right, :remote => true %>
+			<i class="icon-arrow-left"></i>
+			<h7 class="giornata">Giornata 1</h7>	
+			<i class="icon-arrow-right"></i>
 		</div>
 		<div class="offset2 span8 data">
-			<center>Giocata 12.07.13</center>
+			<center>Giocata 06.10.13</center>
 		</div>
 		<br /><br />
 		<div class="scontro row center">
@@ -14,7 +16,7 @@
 				<%= image_tag("logo.png")%>
 			</div>
 			<div class="span5 squadra">
-				<%= image_tag("stemmaw.png")%>
+				<%= image_tag("valeggio.bmp")%>
 			</div>
 		</div>
 		<div class="center">
@@ -23,21 +25,21 @@
 			</div>
 			<div class="span2"><strong>VS</strong></div>
 			<div class="span5 squadra">
-				<strong>Squadra W Rugby</strong>
+				<strong>Valeggio Rugby</strong>
 			</div>
 		</div>
 		<div class="offset2 span8">
-			<center><strong>23 - 13</strong></center>
+			<center><strong>0 - 59</strong></center>
 		</div>
 	</div>
-	<div id="1" class="giornata principale invisibile">
+	<div id="1" class="giornata principale attivo">
 		<div class="offset2 span8 center">
-			<%= link_to '<i class="icon-arrow-left"></i>'.html_safe, controller: :welcome, action: :left, :remote => true %>
-			<h7>Giornata 2</h7>	
-			<%= link_to '<i class="icon-arrow-right"></i>'.html_safe, controller: :welcome, action: :right, :remote => true %>
+			<i class="icon-arrow-left"></i>
+			<h7 class="giornata">Giornata 2</h7>	
+			<i class="icon-arrow-right"></i>
 		</div>
 		<div class="offset2 span8 data">
-			<center>Giocata 26.07.13</center>
+			<center>Giocata 13.10.13</center>
 		</div>
 		<br /><br />
 		<div class="scontro row center">
@@ -45,7 +47,7 @@
 				<%= image_tag("logo.png")%>
 			</div>
 			<div class="span5 squadra">
-				<%= image_tag("squadraa.jpg")%>
+				<%= image_tag("benacense.jpg")%>
 			</div>
 		</div>
 		<div class="center">
@@ -54,26 +56,27 @@
 			</div>
 			<div class="span2"><strong>VS</strong></div>
 			<div class="span5 squadra">
-				<strong>SquadraA Rugby</strong>
+				<strong>Rugby Benacense</strong>
 			</div>
 		</div>
 		<div class="offset2 span8">
-			<center><strong>5 - 0</strong></center>
+			<center><strong>13 - 23</strong></center>
 		</div>
 	</div>
+
 	<div id="2" class="giornata principale invisibile">
 		<div class="offset2 span8 center">
-			<%= link_to '<i class="icon-arrow-left"></i>'.html_safe, controller: :welcome, action: :left, :remote => true %>
-			<h7>Giornata 3</h7>	
-			<%= link_to '<i class="icon-arrow-right"></i>'.html_safe, controller: :welcome, action: :right, :remote => true %>
+			<i class="icon-arrow-left"></i>
+			<h7 class="giornata">Giornata 3</h7>	
+			<i class="icon-arrow-right"></i>
 		</div>
 		<div class="offset2 span8 data">
-			<center>Da giocare 15.10.13</center>
+			<center>Da giocare 27.10.13</center>
 		</div>
 		<br /><br />
 		<div class="scontro row center">
 			<div class="span5 offset2 squadra">
-				<%= image_tag("squadrab.jpg")%>
+				<%= image_tag("trento.jpg")%>
 			</div>
 			<div class="span5 squadra">
 				<%= image_tag("logo.png")%>
@@ -81,7 +84,7 @@
 		</div>
 		<div class="center">
 			<div class="span5 squadra">
-				<strong>Squadra B Rugby</strong>
+				<strong>Trento Rugby</strong>
 			</div>
 			<div class="span2"><strong>VS</strong></div>
 			<div class="span5 squadra">
@@ -89,5 +92,385 @@
 			</div>
 		</div>
 	</div>
+
+	<div id="3" class="giornata principale invisibile">
+		<div class="offset2 span8 center">
+			<i class="icon-arrow-left"></i>
+			<h7 class="giornata">Giornata 4</h7>	
+			<i class="icon-arrow-right"></i>
+		</div>
+		<div class="offset2 span8 data">
+			<center>Da giocare 17.11.13</center>
+		</div>
+		<br /><br />
+		<div class="scontro row center">
+			<div class="span5 offset2 squadra">
+				<%= image_tag("logo.png")%>
+			</div>
+			<div class="span5 squadra">
+				<%= image_tag("cavaliers.jpg")%>
+			</div>
+		</div>
+		<div class="center">
+			<div class="span5 squadra">
+				<strong>Cedroni Rugby</strong>
+			</div>
+			<div class="span2"><strong>VS</strong></div>
+			<div class="span5 squadra">
+				<strong>Sudtirolo Rugby</strong>
+			</div>
+		</div>
+	</div>
+
+	<div id="4" class="giornata principale invisibile">
+		<div class="offset2 span8 center">
+			<i class="icon-arrow-left"></i>
+			<h7 class="giornata">Giornata 5</h7>	
+			<i class="icon-arrow-right"></i>
+		</div>
+		<div class="offset2 span8 data">
+			<center>Da giocare 01.12.13</center>
+		</div>
+		<br /><br />
+		<div class="scontro row center">
+			<div class="span5 offset2 squadra">
+				<%= image_tag("sirena.png")%>
+			</div>
+			<div class="span5 squadra">
+				<%= image_tag("logo.png")%>
+			</div>
+		</div>
+		<div class="center">
+			<div class="span5 squadra">
+				<strong>Polisportiva Oltrefersina</strong>
+			</div>
+			<div class="span2"><strong>VS</strong></div>
+			<div class="span5 squadra">
+				<strong>Cedroni Rugby</strong>
+			</div>
+		</div>
+	</div>
+
+	<div id="5" class="giornata principale invisibile">
+		<div class="offset2 span8 center">
+			<i class="icon-arrow-left"></i>
+			<h7 class="giornata">Giornata 6</h7>	
+			<i class="icon-arrow-right"></i>
+		</div>
+		<div class="offset2 span8 data">
+			<center>Da giocare 08.12.13</center>
+		</div>
+		<br /><br />
+		<div class="scontro row center">
+			<div class="span5 offset2 squadra">
+				<%= image_tag("logo.png")%>
+			</div>
+			<div class="span5 squadra">
+				<%= image_tag("lagaria.png")%>
+			</div>
+		</div>
+		<div class="center">
+			<div class="span5 squadra">
+				<strong>Cedroni Rugby</strong>
+			</div>
+			<div class="span2"><strong>VS</strong></div>
+			<div class="span5 squadra">
+				<strong>Lagaria Rugby</strong>
+			</div>
+		</div>
+	</div>
+
+	<div id="6" class="giornata principale invisibile">
+		<div class="offset2 span8 center">
+			<i class="icon-arrow-left"></i>
+			<h7 class="giornata">Giornata 7</h7>	
+			<i class="icon-arrow-right"></i>
+		</div>
+		<div class="offset2 span8 data">
+			<center>Da giocare 15.12.13</center>
+		</div>
+		<br /><br />
+		<div class="scontro row center">
+			<div class="span5 offset2 squadra">
+				<%= image_tag("logo.png")%>
+			</div>
+			<div class="span5 squadra">
+				<%= image_tag("valpo.jpg")%>
+			</div>
+		</div>
+		<div class="center">
+			<div class="span5 squadra">
+				<strong>Cedroni Rugby</strong>
+			</div>
+			<div class="span2"><strong>VS</strong></div>
+			<div class="span5 squadra">
+				<strong>Valpolicella Rugby</strong>
+			</div>
+		</div>
+	</div>
+
+	<div id="7" class="giornata principale invisibile">
+		<div class="offset2 span8 center">
+			<i class="icon-arrow-left"></i>
+			<h7 class="giornata">Giornata 8</h7>	
+			<i class="icon-arrow-right"></i>
+		</div>
+		<div class="offset2 span8 data">
+			<center>Da giocare 02.02.14</center>
+		</div>
+		<br /><br />
+		<div class="scontro row center">
+			<div class="span5 offset2 squadra">
+				<%= image_tag("logo.png")%>
+			</div>
+			<div class="span5 squadra">
+				<%= image_tag("west_verona.png")%>
+			</div>
+		</div>
+		<div class="center">
+			<div class="span5 squadra">
+				<strong>Cedroni Rugby</strong>
+			</div>
+			<div class="span2"><strong>VS</strong></div>
+			<div class="span5 squadra">
+				<strong>West Verona Rugby</strong>
+			</div>
+		</div>
+	</div>
+
+	<!--FINE ANDATA INIZIO RITORNO-->
+
+	<div id="8" class="giornata principale invisibile">
+	 	<div class="offset2 span8 center">
+			<i class="icon-arrow-left"></i>
+			<h7 class="giornata">Giornata 9</h7>	
+			<i class="icon-arrow-right"></i>
+		</div>
+		<div class="offset2 span8 data">
+			<center>Da giocare 09.02.14</center>
+		</div>
+		<br /><br />
+		<div class="scontro row center">
+			<div class="span5 offset2 squadra">
+				<%= image_tag("valeggio.bmp")%>
+			</div>
+			<div class="span5 squadra">
+				<%= image_tag("logo.png")%>
+			</div>
+		</div>
+		<div class="center">
+			<div class="span5 squadra">
+				<strong>Valeggio Rugby</strong>
+			</div>
+			<div class="span2"><strong>VS</strong></div>
+			<div class="span5 squadra">
+				<strong>Cedroni Rugby</strong>
+			</div>
+		</div>
+	</div>
+
+	<div id="9" class="giornata principale invisibile">
+		<div class="offset2 span8 center">
+			<i class="icon-arrow-left"></i>
+			<h7 class="giornata">Giornata 10</h7>	
+			<i class="icon-arrow-right"></i>
+		</div>
+		<div class="offset2 span8 data">
+			<center>Da giocare 16.02.14</center>
+		</div>
+		<br /><br />
+		<div class="scontro row center">
+			<div class="span5 offset2 squadra">
+				<%= image_tag("benacense.jpg")%>
+			</div>
+			<div class="span5 squadra">
+				<%= image_tag("logo.png")%>
+			</div>
+		</div>
+		<div class="center">
+			<div class="span5 squadra">
+				<strong>Rugby Benacense</strong>
+			</div>
+			<div class="span2"><strong>VS</strong></div>
+			<div class="span5 squadra">
+				<strong>Cedroni Rugby</strong>
+			</div>
+		</div>
+	</div>
+
+	<div id="10" class="giornata principale invisibile">
+		<div class="offset2 span8 center">
+			<i class="icon-arrow-left"></i>
+			<h7 class="giornata">Giornata 11</h7>	
+			<i class="icon-arrow-right"></i>
+		</div>
+		<div class="offset2 span8 data">
+			<center>Da giocare 02.03.14</center>
+		</div>
+		<br /><br />
+		<div class="scontro row center">
+			<div class="span5 offset2 squadra">
+				<%= image_tag("logo.png")%>
+			</div>
+			<div class="span5 squadra">
+				<%= image_tag("trento.jpg")%>
+			</div>
+		</div>
+		<div class="center">
+			<div class="span5 squadra">
+				<strong>Cedroni Rugby</strong>
+			</div>
+			<div class="span2"><strong>VS</strong></div>
+			<div class="span5 squadra">
+				<strong>Trento Rugby</strong>
+			</div>
+		</div>
+	</div>
+
+	<div id="11" class="giornata principale invisibile">
+		<div class="offset2 span8 center">
+			<i class="icon-arrow-left"></i>
+			<h7 class="giornata">Giornata 12</h7>	
+			<i class="icon-arrow-right"></i>
+		</div>
+		<div class="offset2 span8 data">
+			<center>Da giocare 23.03.14</center>
+		</div>
+		<br /><br />
+		<div class="scontro row center">
+			<div class="span5 offset2 squadra">
+				<%= image_tag("cavaliers.jpg")%>
+			</div>
+			<div class="span5 squadra">
+				<%= image_tag("logo.png")%>
+			</div>
+		</div>
+		<div class="center">
+			<div class="span5 squadra">
+				<strong>Sudtirolo Rugby</strong>
+			</div>
+			<div class="span2"><strong>VS</strong></div>
+			<div class="span5 squadra">
+				<strong>Cedroni Rugby</strong>
+			</div>
+		</div>
+	</div>
+
+	<div id="12" class="giornata principale invisibile">
+		<div class="offset2 span8 center">
+			<i class="icon-arrow-left"></i>
+			<h7 class="giornata">Giornata 13</h7>	
+			<i class="icon-arrow-right"></i>
+		</div>
+		<div class="offset2 span8 data">
+			<center>Da giocare 30.03.14</center>
+		</div>
+		<br /><br />
+		<div class="scontro row center">
+			<div class="span5 offset2 squadra">
+				<%= image_tag("logo.png")%>
+			</div>
+			<div class="span5 squadra">
+				<%= image_tag("sirena.png")%>
+			</div>
+		</div>
+		<div class="center">
+			<div class="span5 squadra">
+				<strong>Cedroni Rugby</strong>
+			</div>
+			<div class="span2"><strong>VS</strong></div>
+			<div class="span5 squadra">
+				<strong>Polisportiva Oltrefersina</strong>
+			</div>
+		</div>
+	</div>
+
+	<div id="13" class="giornata principale invisibile">
+		<div class="offset2 span8 center">
+			<i class="icon-arrow-left"></i>
+			<h7 class="giornata">Giornata 14</h7>	
+			<i class="icon-arrow-right"></i>
+		</div>
+		<div class="offset2 span8 data">
+			<center>Da giocare 13.04.14</center>
+		</div>
+		<br /><br />
+		<div class="scontro row center">
+			<div class="span5 offset2 squadra">
+				<%= image_tag("lagaria.png")%>
+			</div>
+			<div class="span5 squadra">
+				<%= image_tag("logo.png")%>
+			</div>
+		</div>
+		<div class="center">
+			<div class="span5 squadra">
+				<strong>Lagaria Rugby</strong>
+			</div>
+			<div class="span2"><strong>VS</strong></div>
+			<div class="span5 squadra">
+				<strong>Cedroni Rugby</strong>
+			</div>
+		</div>
+	</div>
+
+	<div id="14" class="giornata principale invisibile">
+		<div class="offset2 span8 center">
+			<i class="icon-arrow-left"></i>
+			<h7 class="giornata">Giornata 15</h7>	
+			<i class="icon-arrow-right"></i>
+		</div>
+		<div class="offset2 span8 data">
+			<center>Da giocare 27.04.14</center>
+		</div>
+		<br /><br />
+		<div class="scontro row center">
+			<div class="span5 offset2 squadra">
+				<%= image_tag("valpo.jpg")%>
+			</div>
+			<div class="span5 squadra">
+				<%= image_tag("logo.png")%>
+			</div>
+		</div>
+		<div class="center">
+			<div class="span5 squadra">
+				<strong>Valpolicella Rugby</strong>
+			</div>
+			<div class="span2"><strong>VS</strong></div>
+			<div class="span5 squadra">
+				<strong>Cedroni Rugby</strong>
+			</div>
+		</div>
+	</div>
+
+	<div id="15" class="giornata principale invisibile">
+		<div class="offset2 span8 center">
+			<i class="icon-arrow-left"></i>
+			<h7 class="giornata">Giornata 16</h7>	
+			<i class="icon-arrow-right"></i>
+		</div>
+		<div class="offset2 span8 data">
+			<center>Da giocare 04.05.14</center>
+		</div>
+		<br /><br />
+		<div class="scontro row center">
+			<div class="span5 offset2 squadra">
+				<%= image_tag("west_verona.png")%>
+			</div>
+			<div class="span5 squadra">
+				<%= image_tag("logo.png")%>
+			</div>
+		</div>
+		<div class="center">
+			<div class="span5 squadra">
+				<strong>West Verona Rugby</strong>
+			</div>
+			<div class="span2"><strong>VS</strong></div>
+			<div class="span5 squadra">
+				<strong>Cedroni Rugby</strong>
+			</div>
+		</div>
+	</div>
+
 </div>
 <br /><br /><br />

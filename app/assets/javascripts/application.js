@@ -14,3 +14,29 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require_tree .
+
+$(".icon-arrow-right").click(function(){
+ 	var active = $(".calendario").children(".attivo");
+	var id = parseInt(active.attr("id"));
+	active.removeClass("attivo");
+	active.addClass("invisibile");
+	if (id == 15) {
+		$("#0").removeClass("invisibile").addClass("attivo");	
+	}
+	else{
+		$("#"+(id+1)).removeClass("invisibile").addClass("attivo");
+	}
+});
+
+$(".icon-arrow-left").click(function(){
+ 	var active = $(".calendario").children(".attivo");
+	var id = parseInt(active.attr("id"));
+	active.removeClass("attivo");
+	active.addClass("invisibile");
+	if (id == 0) {
+		$("#15").removeClass("invisibile").addClass("attivo");	
+	}
+	else{
+		$("#"+(id-1)).removeClass("invisibile").addClass("attivo");
+	}
+});
