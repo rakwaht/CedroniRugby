@@ -12,8 +12,17 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require fancybox
 //= require twitter/bootstrap
 //= require_tree .
+
+
+$(document).ready(function() {
+	$(".fancybox").fancybox({
+		openEffect	: 'none',
+		closeEffect	: 'none'
+	});
+});
 
 $(".icon-arrow-right").click(function(){
  	var active = $(".calendario").children(".attivo");
@@ -39,11 +48,4 @@ $(".icon-arrow-left").click(function(){
 	else{
 		$("#"+(id-1)).removeClass("invisibile").addClass("attivo");
 	}
-});
-
-$(".imageTrigger").click(function(){
-	var url = $(this).attr('src');
-	$(".active").removeClass("active");
-	var id = $(this).attr('id');
-	$("."+id).addClass("active");
 });

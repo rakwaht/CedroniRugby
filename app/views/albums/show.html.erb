@@ -1,36 +1,14 @@
 <div class="row-fluid center principale">	
-	<h5><%=@album.title%></h5>
+	<h5 class="titolo-sezione"><%=@album.title%></h5>
 	<ul class="thumbnails">
 		<% @album.photos.each do |p| %>	
 				<li class="thumbnail">
-					<a href="#myModal" data-toggle="modal">
-						<div class="contenitore"><img id="<%= p.id %>" class="imageTrigger" src="<%= p.image_url %>" alt=""></div>
-					</a>
-					</li>
+					<div class="contenitore">
+                        <a class="fancybox" rel="gallery1" href="<%= p.image_url %>" title="<%=p.title%>">
+                            <img src="<%= p.image_url %>" alt="">
+                        </a>
+                    </div>
+				</li>
 		<% end %>
 	</ul>
-</div>
-     
-    <!-- Modal -->
-<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
- <div class="modal-header green-background">
-   <button type="button" class="close white-text" data-dismiss="modal" aria-hidden="true">X</button>
-   <h5 class="white-text"><%=@album.title%></h5>
- </div>
- <div class="modal-body">
-  	<div id="galleryCarousel" class="carousel slide">
-    <!-- Carousel items -->
-    <div class="carousel-inner">
-     <div class="active item <%=@album.photos.first.id%>"><img src="<%= @album.photos.first.image_url %>" alt=""></div>
-       <% @album.photos.each do |p| %>
-     	<% if p.id != @album.photos.first.id %>
-    		<div class="item <%=p.id%>"><img src="<%= p.image_url %>" alt=""> </div>
-    	<% end %>
-       <% end %>
-    </div>
-    <!-- Carousel nav -->
-    <a class="carousel-control left" href="#galleryCarousel" data-slide="prev">&lsaquo;</a>
-    <a class="carousel-control right" href="#galleryCarousel" data-slide="next">&rsaquo;</a>
-    </div>
- </div>
 </div>
