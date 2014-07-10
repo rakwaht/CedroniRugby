@@ -1,4 +1,7 @@
 class PhotosController < ApplicationController
+    
+    before_filter :logged	
+
 	def new
 		@album=Album.find(params[:album_id])
 	end

@@ -1,0 +1,11 @@
+<div class="well">
+	<h1>Edit Team</h1>
+	<%= form_for :team, url: {controller: :team, action: :edit_confirm, :team_id => @team.id} do |f| %>
+	  <p>Nome squadra:  <%= f.text_field :name, placeholder: "Nome.." %></p>
+	  <p>Punti:  <%= f.text_field :point, placeholder: "Punti.." %></p>
+	  <p>Giornate:  <%= f.text_field :games, placeholder: "Giornate.." %></p>
+	  <div class="actions">
+	    <%= f.submit %>
+	  </div>
+	<% end %>
+</div>

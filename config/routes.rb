@@ -16,10 +16,18 @@ Cedroni::Application.routes.draw do
   #admin
   get "admin" => "welcome#admin"
 
+  #root to team
+  get "team/new" => "team#new"
+  get "team/delete" => "team#delete"
+  post "team/create" => "team#create"
+  post "team/edit_confirm" => "team#edit_confirm"
+  get "team/edit" => "team#edit"
+
   #root to news
   get "news/new" => "news#new"
   get "news/show" => "news#show"
   post "news/create" => "news#create"
+  post "news/edit_confirm" => "news#edit_confirm"
   get "news/edit" => "news#edit"
   get "news/delete" => "news#delete"
   get "news/archive" => "news#archive" 

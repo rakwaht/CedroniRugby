@@ -1,5 +1,5 @@
 class AlbumsController < ApplicationController
-	
+  	before_filter :logged, :except => [ :show ]	
 
 	def new
 	end

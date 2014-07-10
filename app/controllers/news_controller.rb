@@ -1,4 +1,5 @@
 class NewsController < ApplicationController
+	before_filter :logged, :except => [ :archive, :show ]
 
 	def new
 	end
@@ -22,7 +23,17 @@ class NewsController < ApplicationController
 
 	def edit
 		@news = News.find(params[:news_id])
-		@news.destroy
+	end
+
+	def edit_confirm
+		@old =  News.find(params[:news_id])
+		@old.destroy 
+		@news = News.new(params[:news])
+    	if @news.save
+      		redirect_to controller: :welcome, action: :admin
+    	else 
+      		redirect_to controller: :news,action: :new
+    	end
 	end
 
 	def delete

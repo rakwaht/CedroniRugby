@@ -2,6 +2,7 @@ class WelcomeController < ApplicationController
 	
 	def index
 		@all_news = News.find(:all, :order => "created_at DESC", :limit => 3)
+		@placement = Teams.find(:all, :order => "point DESC")
 	end
 
 	def societa
@@ -22,6 +23,7 @@ class WelcomeController < ApplicationController
 	def admin
 		@all_news = News.all(:order => "created_at DESC")
 		@all_album = Album.all(:order => "created_at DESC")
+		@placement = Teams.find(:all, :order => "point DESC")
 	end
 
 	def galleria

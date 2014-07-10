@@ -32,3 +32,38 @@
 		<br />
 	<% end %>
 <%= link_to "Nuovo Album", controller: :albums, action: :new %>
+
+<div class="classifica principale">
+ 	 	<table class="table table-condensed">
+ 	 	  <caption>
+ 	 	  	<span>Classifica Campionato C2:</span><br />
+			<%= link_to "Aggiungi Squadra", controller: :team, action: :new %>
+ 	 	  </caption>
+		  <thead>
+		    <tr>
+		      <th>Pos.</th>
+		      <th>Squadra</th>
+		      <th>G.</th>
+		      <th>Pt.</th>
+		      <th></th>
+		      <th></th>
+		    </tr>
+		  </thead>
+		  <tbody>
+			<% @placement.each_with_index do |p,i| %>
+			    <tr>
+			      <td><%= i+1 %></td>
+			      <td><%= p.name %></td>
+			      <td><%= p.point %></td>
+			      <td><%= p.games %></td>
+			      <td>
+			      	<%= link_to "Edit", controller: :team, action: :edit , :team_id => p.id%>
+			      </td>
+			      <td>
+			      	<%=link_to "Delete", controller: :team, action: :delete, :team_id=>p.id%>
+			      </td>
+			    </tr>
+			<% end %>
+		  </tbody>
+		</table>
+ 	 </div>
