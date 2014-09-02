@@ -17,8 +17,11 @@
 	<%else%>
 		<div class="row-fluid">
 			<div class="span12">
-				<div class="prev">
-					<%= @news.body %>
+				<div class="post-header">
+					<span class="data"><%=@news.created_at.strftime("%Y-%m-%d") %></span>
+					&nbsp
+					<span class="titolo"><%= @news.title %></span>
+					<p><%= @news.body %></p>
 				</div>
 			</div>
 		</div>

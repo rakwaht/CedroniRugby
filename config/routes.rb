@@ -42,6 +42,7 @@ Cedroni::Application.routes.draw do
   #root to photo
   get "photos/new" => "photos#new"
   post "photos/create" => "photos#create"
+  get "photos/delete" => "photos#delete"
 
   #session root
   get "sessions/login" => "sessions#login"

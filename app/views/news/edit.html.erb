@@ -1,12 +1,13 @@
 <div class="well">
-	<h1>Editing News</h1>
+	<h4>Editing News</h4>
 	<%= form_for :news, url: {controller: :news, action: :edit_confirm, :news_id => @news.id} do |f| %>
 	  <p>Titolo News:  <%= f.text_field :title, placeholder: "Title.." %></p>
 	  <p>URL immagine: <%= f.text_field :image_url,:placeholder => "Image Url.."%></p>
 	  <p>Testo:</p> <%= f.text_area :body, placeholder: "Text..", :class => "area-testo"%><br />
 	  Argomento: <%= f.select :topic, options_for_select(["Maschile","Femminile","Societa"])%><br />
 	  <div class="actions">
-	    <%= f.submit %>
+	    <%= f.submit 'Save News', :class => 'btn btn-success'%>
+		<div class="btn"><%= link_to 'Back', controller: :welcome, action: :admin %></div>
 	  </div>
 	<% end %>
 </div>

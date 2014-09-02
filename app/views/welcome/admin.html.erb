@@ -1,30 +1,32 @@
 <div class="post-header">
-	<h2>Archivio News:</h2>
-</div>
+	<h4>Archivio News:</h4>
  <% if @all_news.count == 0 %>
 	<div class="alert alert-error principale">
       <h2><strong><center>Non sono presenti news!</center></strong></h2>
     </div>
  <% else %>
 	<%@all_news.each do |n| %>
-		<div class="post-header">
 			<span class="data"><%=n.created_at.strftime("%Y-%m-%d") %></span>
 			&nbsp
 			<%= link_to controller: :news, action: :show, :news_id => n.id do %>
 				<span class="titolo"><%= n.title %></span>
 			<%end%>
+			&nbsp;
 			<span>
 				<%= link_to "Edit", controller: :news, action: :edit , :news_id => n.id %>
 				<%= link_to "Delete", controller: :news, action: :delete , :news_id => n.id %>
 			</span>
-		</div>
+			<br />
 	<% end %>
  <% end %>
-<br /><br />
-<%= link_to "Nuova News", controller: :news, action: :new %>
+	<div><%= link_to "Nuova News", controller: :news, action: :new %></div>
+</div>
 <hr>
-<p>Albums:</p>
+<div class="post-header">
+<h4>Albums:</h4>
 	<% @all_album.each do |a| %>
+		<span class="data"><%=a.created_at.strftime("%Y-%m-%d") %></span>
+		&nbsp;
 		<%= link_to controller: :albums, action: :show_admin, :album_id => a.id do %>
 				<span class="titolo"><%= a.title %></span>
 		<%end%>
@@ -32,12 +34,13 @@
 		<br />
 	<% end %>
 <%= link_to "Nuovo Album", controller: :albums, action: :new %>
-
-<div class="classifica principale">
+</div>
+<hr>
+<div class="post-header">
+<h4>Classifica:</h4>
+	<div class="classifica principale">
  	 	<table class="table table-condensed">
  	 	  <caption>
- 	 	  	<span>Classifica Campionato C2:</span><br />
-			<%= link_to "Aggiungi Squadra", controller: :team, action: :new %>
  	 	  </caption>
 		  <thead>
 		    <tr>
@@ -54,8 +57,8 @@
 			    <tr>
 			      <td><%= i+1 %></td>
 			      <td><%= p.name %></td>
-			      <td><%= p.point %></td>
 			      <td><%= p.games %></td>
+			      <td><%= p.point %></td>
 			      <td>
 			      	<%= link_to "Edit", controller: :team, action: :edit , :team_id => p.id%>
 			      </td>
@@ -67,3 +70,5 @@
 		  </tbody>
 		</table>
  	 </div>
+ 		<%= link_to "Aggiungi Squadra", controller: :team, action: :new %>
+ </div>

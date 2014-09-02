@@ -1,7 +1,8 @@
 <%= form_for :album, url: {controller: :albums, action: :create} do |f| %>
   <p>Titolo Album:  <%= f.text_field :title, placeholder: "Title.." %></p>
-  <p>Descrizione:</p> <%= f.text_area :description, placeholder: "Text.."%><br />
+  <p>Descrizione:</p> <%= f.text_area :description, placeholder: "Text..", :class => "area-testo"%><br />
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Save Album', :class => 'btn btn-success'%>
+	<div class="btn"><%= link_to 'Back', controller: :welcome, action: :admin %></div>
   </div>
 <% end %>

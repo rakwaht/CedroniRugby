@@ -5,7 +5,8 @@
 	  <p>Punti:  <%= f.text_field :point, placeholder: "Punti.." %></p>
 	  <p>Giornate:  <%= f.text_field :games, placeholder: "Giornate.." %></p>
 	  <div class="actions">
-	    <%= f.submit %>
+	    <%= f.submit 'Save Team', :class => 'btn btn-success'%>
+		<div class="btn"><%= link_to 'Back', controller: :welcome, action: :admin %></div>
 	  </div>
 	<% end %>
 </div>

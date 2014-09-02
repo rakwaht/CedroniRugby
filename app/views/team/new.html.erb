@@ -1,15 +1,13 @@
 <div class="well">
-	<h1>Crea Squadra:</h1>
+	<h4>Crea Squadra:</h4>
 
 	<%= form_for :team, url: {controller: :team, action: :create} do |f| %>
 	  <p>Nome squadra:  <%= f.text_field :name, placeholder: "Nome.." %></p>
 	  <p>Punti:  <%= f.text_field :point, placeholder: "Punti.." %></p>
 	  <p>Giornate:  <%= f.text_field :games, placeholder: "Giornate.." %></p>
 	  <div class="actions">
-	    <%= f.submit %>
+	    <%= f.submit 'Save Team', :class => 'btn btn-success'%>
+		<div class="btn"><%= link_to 'Back', controller: :welcome, action: :admin %></div>
 	  </div>
 	<% end %>
-	
-
-	<%= link_to 'Back', controller: :welcome, action: :admin %>
 </div>
