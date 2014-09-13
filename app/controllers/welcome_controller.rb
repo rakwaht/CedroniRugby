@@ -21,6 +21,7 @@ class WelcomeController < ApplicationController
 	end
 
 	def admin
+		@admin = User.find_by_password_digest(session[:log])
 		@all_news = News.all(:order => "created_at DESC")
 		@all_album = Album.all(:order => "created_at DESC")
 		@placement = Teams.find(:all, :order => "point DESC")

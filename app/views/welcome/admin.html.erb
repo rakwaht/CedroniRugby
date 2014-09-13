@@ -1,5 +1,10 @@
 <div class="post-header">
-	<h4>Archivio News:</h4>
+	<div class="admin-header">
+		Non sei <%= @admin.name %>?
+		<%= link_to 'Logout!', controller: :sessions, action: :logout %>
+	</div>
+	<div class="clearfix"></div>
+	<h4>Archivio News:</h4> 
  <% if @all_news.count == 0 %>
 	<div class="alert alert-error principale">
       <h2><strong><center>Non sono presenti news!</center></strong></h2>
