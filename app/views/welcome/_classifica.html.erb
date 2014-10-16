@@ -15,9 +15,10 @@
 		      <th>Vinte</th>
 		      <th>Perse</th>
 		      <th>Neutre</th>
-		      <th>Punti Fatti</th>
-		      <th>Punti Subiti</th>
+		      <th>Pt. Fatti</th>
+		      <th>Pt. Subiti</th>
 		      <th>Mete</th>
+		      <th>Diff. Pt.</th>
 		    </tr>
 		  </thead>
 		  <tbody>
@@ -33,6 +34,7 @@
 			      <td><%= p.point_made %></td>
 			      <td><%= p.point_given %></td>
 			      <td><%= p.try %></td>
+			      <td><%= p.point_made - p.point_given%></td>
 			    </tr>
 			<% end %>
 		  </tbody>
