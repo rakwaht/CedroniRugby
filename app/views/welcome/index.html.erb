@@ -22,6 +22,19 @@
 	    				<p>Ragazze della cedroni femminile e lagaria rugby femminile</p>
 	    			</div>
 	    		</div>
+	    		<div class="item indexCarousel">
+	    			<%=image_tag("new_carousel111.jpg")%>
+	    			<div class="carousel-caption">
+	    				<h4>Squadra Maschile</h4>
+	    				<p>Amichevole averona con Valpolicella RUgby under 18</p>
+	    			</div>
+	    		</div>
+	    		<div class="item indexCarousel">
+	    			<%=image_tag("new_carousel222.jpg")%>
+	    		</div>
+	    		<div class="item indexCarousel">
+	    			<%=image_tag("new_carousel333.jpg")%>
+	    		</div>
 	  		</div>
 	  		<!-- Carousel nav -->
 	  		<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
@@ -31,7 +44,7 @@
 </div>
 <hr>
 <div class="row-fluid">
- <div class="span8">
+ <div id="news_container" class="span8">
 	<% @all_news.each do |n|%>
 		<div class="notizia margine">
 			<% if n.image_url.empty? == false %>
@@ -41,13 +54,20 @@
 					</div>
 					<div class="testonews">
 						<div class="post-header">
-							<span class="data"><%=n.created_at.strftime("%Y-%m-%d") %></span>
-							&nbsp
+							<!--<span class="data"><%=n.created_at.strftime("%Y-%m-%d") %></span>
+							&nbsp-->
 							<%= link_to controller: :news, action: :show, :news_id => n.id do %>
 								<span class="titolo colored-link"><%= n.title %></span>
 							<%end%>
 						</div>
-						<p><%= n.body %></p>
+						<p>
+							<%= truncate(n.body, :length => 1400) %>
+							<% if n.body.length > 1400 %>
+								<%= link_to controller: :news, action: :show, :news_id => n.id do %>
+									(continua)
+								<%end%>
+							<%end%>
+						</p>
 					</div>
 					<div class=”clearer”> </div>
 				</div>
@@ -62,7 +82,14 @@
 							<span class="titolo colored-link"><%= n.title %></span>
 							<%end%>
 						</div>
-						<p><%= n.body %></p>
+						<p>
+							<%= truncate(n.body, :length => 1400) %>
+							<% if n.body.length > 1400 %>
+								<%= link_to controller: :news, action: :show, :news_id => n.id do %>
+								(continua)
+								<%end%>
+							<% end %>
+						</p>
 					</div>
 					<div class=”clearer”> </div>
 					</div>
@@ -70,6 +97,15 @@
 			<%end%>
 		</div>
 	<% end %>
+	<% if @all_news.length >= @max_news_onindex %>
+		<%= link_to controller: :news, action: :archive do %>
+			<div class="row-fluid">
+				<div class="offset4 span4">
+					<span class="titolo colored-link">Notizie precedenti</span>
+				</div>
+			</div>
+		<%end%>
+	<%end%>
  </div>
  <div class="span4">
  	<div class="laterale">
@@ -78,7 +114,6 @@
  		<h5>Seguici anche su Facebook:</h5>
  		<div class="fb-like" data-href="https://www.facebook.com/pages/Rugby-Cedroni/192585904157831?fref=ts" data-send="false" data-width="100%" data-show-faces="true" data-font="verdana"></div>
  	 </div><br /><br /><br />-->
- 	 <%= render 'classifica' %>
  	 <br /><br /><br />
  	 <div class="sponsor">
  	 	<h5>Un ringraziamento particolare ai nostri sponsor:</h5>

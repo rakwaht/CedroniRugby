@@ -10,8 +10,7 @@ Cedroni::Application.routes.draw do
   get "contatti" => "welcome#contatti"
   get "gioca_con_noi" => "welcome#gioca"
   get "galleria" => "welcome#galleria"
-  get "left" => "welcome#left"
-  get "right" => "welcome#right"
+  get "result" => "welcome#result"
 
   #admin
   get "admin" => "welcome#admin"

@@ -53,6 +53,12 @@
 		      <th>Squadra</th>
 		      <th>G.</th>
 		      <th>Pt.</th>
+		      <th>Vinte</th>
+		      <th>Perse</th>
+		      <th>Neutre</th>
+		      <th>Punti Fatti</th>
+		      <th>Punti Subiti</th>
+		      <th>Mete</th>
 		      <th></th>
 		      <th></th>
 		    </tr>
@@ -64,6 +70,12 @@
 			      <td><%= p.name %></td>
 			      <td><%= p.games %></td>
 			      <td><%= p.point %></td>
+			      <td><%= p.win %></td>
+			      <td><%= p.lose %></td>
+			      <td><%= p.tie %></td>
+			      <td><%= p.point_made %></td>
+			      <td><%= p.point_given %></td>
+			      <td><%= p.try %></td>
 			      <td>
 			      	<%= link_to "Edit", controller: :team, action: :edit , :team_id => p.id%>
 			      </td>

@@ -3,8 +3,8 @@
 <div class="classifica principale">
  	 	<table class="table table-condensed">
  	 	  <caption>
- 	 	  	<span>Classifica Campionato C2:</span><br />
- 	 	  	<span class="data">Aggiornata al:09-07-13</span>
+ 	 	  	<h4>Classifica Campionato C2:</h4><br />
+ 	 	  	<span class="data">Aggiornata al: <%= @placement.first.created_at.strftime("%d-%m-%Y") %> </span>
  	 	  </caption>
 		  <thead>
 		    <tr>
@@ -12,6 +12,12 @@
 		      <th>Squadra</th>
 		      <th>G.</th>
 		      <th>Pt.</th>
+		      <th>Vinte</th>
+		      <th>Perse</th>
+		      <th>Neutre</th>
+		      <th>Punti Fatti</th>
+		      <th>Punti Subiti</th>
+		      <th>Mete</th>
 		    </tr>
 		  </thead>
 		  <tbody>
@@ -21,6 +27,12 @@
 			      <td><%= p.name %></td>
 			      <td><%= p.games %></td>
 			      <td><%= p.point %></td>
+			      <td><%= p.win %></td>
+			      <td><%= p.lose %></td>
+			      <td><%= p.tie %></td>
+			      <td><%= p.point_made %></td>
+			      <td><%= p.point_given %></td>
+			      <td><%= p.try %></td>
 			    </tr>
 			<% end %>
 		  </tbody>

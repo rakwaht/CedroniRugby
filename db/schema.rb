@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140709121856) do
+ActiveRecord::Schema.define(:version => 20141016102428) do
 
   create_table "albums", :force => true do |t|
     t.text     "title"
@@ -43,8 +43,14 @@ ActiveRecord::Schema.define(:version => 20140709121856) do
     t.text     "name"
     t.integer  "point"
     t.integer  "games"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.integer  "win"
+    t.integer  "lose"
+    t.integer  "tie"
+    t.integer  "point_made"
+    t.integer  "point_given"
+    t.integer  "try"
   end
 
   create_table "users", :force => true do |t|
