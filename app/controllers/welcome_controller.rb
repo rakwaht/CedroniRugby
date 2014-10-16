@@ -1,7 +1,7 @@
 class WelcomeController < ApplicationController
 	
 	def index
-		@max_news_onindex = 2
+		@max_news_onindex = 6
 		@all_news = News.find(:all, :order => "created_at DESC", :limit => @max_news_onindex)
 	end
 
