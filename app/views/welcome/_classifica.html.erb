@@ -12,13 +12,13 @@
 		      <th>Squadra</th>
 		      <th>G.</th>
 		      <th>Pt.</th>
-		      <th>Vinte</th>
-		      <th>Perse</th>
-		      <th>Neutre</th>
-		      <th>Pt. Fatti</th>
-		      <th>Pt. Subiti</th>
-		      <th>Mete</th>
-		      <th>Diff. Pt.</th>
+		      <th class="hidden-phone">Vinte</th>
+		      <th class="hidden-phone">Perse</th>
+		      <th class="hidden-phone">Neutre</th>
+		      <th class="hidden-phone">Pt. Fatti</th>
+		      <th class="hidden-phone">Pt. Subiti</th>
+		      <th class="hidden-phone">Mete</th>
+		      <th class="hidden-phone">Diff. Pt.</th>
 		    </tr>
 		  </thead>
 		  <tbody>
@@ -28,13 +28,13 @@
 			      <td><%= p.name %></td>
 			      <td><%= p.games %></td>
 			      <td><%= p.point %></td>
-			      <td><%= p.win %></td>
-			      <td><%= p.lose %></td>
-			      <td><%= p.tie %></td>
-			      <td><%= p.point_made %></td>
-			      <td><%= p.point_given %></td>
-			      <td><%= p.try %></td>
-			      <td><%= p.point_made - p.point_given%></td>
+			      <td class="hidden-phone"><%= p.win %></td>
+			      <td class="hidden-phone"><%= p.lose %></td>
+			      <td class="hidden-phone"><%= p.tie %></td>
+			      <td class="hidden-phone"><%= p.point_made %></td>
+			      <td class="hidden-phone"><%= p.point_given %></td>
+			      <td class="hidden-phone"><%= p.try %></td>
+			      <td class="hidden-phone"><%= p.point_made - p.point_given%></td>
 			    </tr>
 			<% end %>
 		  </tbody>

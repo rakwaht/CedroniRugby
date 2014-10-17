@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141016102428) do
+ActiveRecord::Schema.define(:version => 20141017073328) do
 
   create_table "albums", :force => true do |t|
     t.text     "title"
@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(:version => 20141016102428) do
     t.integer  "point_made"
     t.integer  "point_given"
     t.integer  "try"
+    t.integer  "year"
   end
 
   create_table "users", :force => true do |t|

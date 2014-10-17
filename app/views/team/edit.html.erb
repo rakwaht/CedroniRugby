@@ -10,6 +10,7 @@
 	  <p>Punti Fatti:  <%= f.text_field :point_made, placeholder: "Punti fatti.." %></p>
 	  <p>Punti Subiti:  <%= f.text_field :point_given, placeholder: "Punti subiti.." %></p>
 	  <p>Mete:  <%= f.text_field :try, placeholder: "Mete.." %></p>
+	  <p>Anno:  <%= f.text_field :year, placeholder: "2014 o 2013" %></p>
 	  <div class="actions">
 	    <%= f.submit 'Save Team', :class => 'btn btn-success'%>
 		<div class="btn"><%= link_to 'Back', controller: :welcome, action: :admin %></div>

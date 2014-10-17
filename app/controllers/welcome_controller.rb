@@ -14,7 +14,8 @@ class WelcomeController < ApplicationController
 	#end
 
 	def result
-		@placement = Teams.find(:all, :order => "point DESC")
+		@year = params[:year]
+		@placement = Teams.where(:year => @year).order("point DESC")
 	end
 
 	def societa
@@ -36,7 +37,8 @@ class WelcomeController < ApplicationController
 		@admin = User.find_by_password_digest(session[:log])
 		@all_news = News.all(:order => "created_at DESC")
 		@all_album = Album.all(:order => "created_at DESC")
-		@placement = Teams.find(:all, :order => "point DESC")
+		@placement2013 = Teams.where(:year => 2013).order("point DESC")
+		@placement2014 = Teams.where(:year => 2014).order("point DESC")
 	end
 
 	def galleria
