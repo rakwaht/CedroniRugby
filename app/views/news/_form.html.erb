@@ -2,6 +2,7 @@
   <p>Titolo News:  <%= f.text_field :title, placeholder: "Title.." %></p>
   <p>URL immagine: <%= f.text_field :image_url,:placeholder => "Image Url.."%></p>
   <p>Testo:</p> <%= f.text_area :body, placeholder: "Text..", :class => "area-testo"%><br />
+  <p>Anno:</p> <%= f.text_field :year, placeholder: "2013 o 2014.." %><br />
   Argomento: <%= f.select :topic, options_for_select(["Maschile","Femminile","Societa"])%><br />
   <div class="actions">
     <%= f.submit 'Save News', :class => 'btn btn-success'%>
