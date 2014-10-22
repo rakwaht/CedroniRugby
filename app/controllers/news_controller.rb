@@ -15,10 +15,12 @@ class NewsController < ApplicationController
 
 	def archive
 		@topic = params[:topic]
-		@all_news = News.all(:order => "created_at DESC")
-		@news_maschile = News.where(:topic => "Maschile");
-		@news_femminile = News.where(:topic => "Femminile");
-		@news_societa = News.where(:topic => "Societa");
+		@year = params[:year]
+		@year = @year ? @year : 2014
+		@all_news = News.where(:year => @year).order("created_at DESC")
+		@news_maschile = News.where(:topic => "Maschile").where(:year => @year).order("created_at DESC")
+		@news_femminile = News.where(:topic => "Femminile").where(:year => @year).order("created_at DESC")
+		@news_societa = News.where(:topic => "Societa").where(:year => @year).order("created_at DESC")
 	end
 
 	def edit

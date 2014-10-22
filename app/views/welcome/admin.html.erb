@@ -4,27 +4,61 @@
 		<%= link_to 'Logout!', controller: :sessions, action: :logout %>
 	</div>
 	<div class="clearfix"></div>
-	<h4>Archivio News:</h4> 
- <% if @all_news.count == 0 %>
-	<div class="alert alert-error principale">
-      <h2><strong><center>Non sono presenti news!</center></strong></h2>
+</div>
+<div class="post-header">
+ <div class="tabbable"> <!-- Only required for left/right tabs -->
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#tab1" data-toggle="tab">2014-2015</a></li>
+    <li><a href="#tab2" data-toggle="tab">2013-2014</a></li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane active" id="tab1">
+        <h4>News 2014-2015:</h4>
+        <% if @news2014.count == 0 %>
+			<div class="alert alert-error principale">
+		      <h2><strong><center>Non sono presenti news!</center></strong></h2>
+		    </div>
+		 <% else %>
+			<%@news2014.each do |n| %>
+					<span class="data"><%=n.created_at.strftime("%Y-%m-%d") %></span>
+					&nbsp
+					<%= link_to controller: :news, action: :show, :news_id => n.id do %>
+						<span class="titolo"><%= n.title %></span>
+					<%end%>
+					&nbsp;
+					<span>
+						<%= link_to "Edit", controller: :news, action: :edit , :news_id => n.id %>
+						<%= link_to "Delete", controller: :news, action: :delete , :news_id => n.id %>
+					</span>
+					<br />
+			<% end %>
+		 <% end %>
     </div>
- <% else %>
-	<%@all_news.each do |n| %>
-			<span class="data"><%=n.created_at.strftime("%Y-%m-%d") %></span>
-			&nbsp
-			<%= link_to controller: :news, action: :show, :news_id => n.id do %>
-				<span class="titolo"><%= n.title %></span>
-			<%end%>
-			&nbsp;
-			<span>
-				<%= link_to "Edit", controller: :news, action: :edit , :news_id => n.id %>
-				<%= link_to "Delete", controller: :news, action: :delete , :news_id => n.id %>
-			</span>
-			<br />
-	<% end %>
- <% end %>
-	<div><%= link_to "Nuova News", controller: :news, action: :new %></div>
+    <div class="tab-pane" id="tab2">
+        <h4>News 2013-2014:</h4>
+        <% if @news2013.count == 0 %>
+			<div class="alert alert-error principale">
+		      <h2><strong><center>Non sono presenti news!</center></strong></h2>
+		    </div>
+		 <% else %>
+			<%@news2013.each do |n| %>
+					<span class="data"><%=n.created_at.strftime("%Y-%m-%d") %></span>
+					&nbsp
+					<%= link_to controller: :news, action: :show, :news_id => n.id do %>
+						<span class="titolo"><%= n.title %></span>
+					<%end%>
+					&nbsp;
+					<span>
+						<%= link_to "Edit", controller: :news, action: :edit , :news_id => n.id %>
+						<%= link_to "Delete", controller: :news, action: :delete , :news_id => n.id %>
+					</span>
+					<br />
+			<% end %>
+		 <% end %>
+    </div>
+  </div>
+ </div>
+ <div><%= link_to "Nuova News", controller: :news, action: :new %></div>
 </div>
 <hr>
 <div class="post-header">
