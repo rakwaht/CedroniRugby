@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141022073612) do
+ActiveRecord::Schema.define(:version => 20141119103810) do
 
   create_table "albums", :force => true do |t|
     t.text     "title"
@@ -25,11 +25,11 @@ ActiveRecord::Schema.define(:version => 20141022073612) do
     t.text     "title"
     t.text     "body"
     t.text     "image_url"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
     t.text     "prew"
     t.string   "topic"
-    t.integer  "year"
+    t.integer  "year",       :default => 2014
   end
 
   create_table "photos", :force => true do |t|
