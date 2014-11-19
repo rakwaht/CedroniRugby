@@ -36,3 +36,8 @@ h7.giornata{
 	font-size: 25px;
 	color: #005420;
 }
+
+.avatarSize > img{
+	max-height: 150px;
+	width: auto;
+}
