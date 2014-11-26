@@ -29,9 +29,12 @@ class NewsController < ApplicationController
 
 	def edit_confirm
 		@old =  News.find(params[:news_id])
-		@old.destroy 
 		@news = News.new(params[:news])
-    	if @news.save
+		@old.update_attributes(:body => @news.body, :title => @news.title, 
+			:image_url => @news.image_url, 
+			:year => @news.year ? @news.year : 2014,
+			:topic => @news.topic)
+    	if @old.save
       		redirect_to controller: :welcome, action: :admin
     	else 
       		redirect_to controller: :news,action: :new
