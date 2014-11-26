@@ -50,6 +50,6 @@ $(".icon-arrow-left").click(function(){
 	}
 });
 
-$('#classifiche_btn').on('touchstart', function (e) {
+$('.touchprevent').on('touchstart', function (e) {
     alert(e);
 })
