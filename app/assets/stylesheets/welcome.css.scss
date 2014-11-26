@@ -88,6 +88,15 @@ div.textimage p{
 
 div.clearer{clear: left}
 
+.table_ranking{
+	width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px;
+    background-color: #fff;
+}
+
+
 .principale{
 	width: 80%;
     margin-left: auto;
@@ -182,4 +191,8 @@ div.clearer{clear: left}
 
 .admin-header{
 	float: right;
+}
+
+.table_cell_centered{
+	text-align: center !important; 
 }

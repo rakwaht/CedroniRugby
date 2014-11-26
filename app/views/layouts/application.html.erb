@@ -44,32 +44,13 @@
             <%= link_to '<div class="brand">CedroniRugby</div>'.html_safe, controller: :welcome, action: :index %>
             <div class="container nav-collapse">
               <ul class="nav pull-right">
-                <li><ul class="nav">
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">News
-                          <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                          <li><%= link_to "2014-2015", controller: :news, action: :archive, year: 2014 %></li>
-                          <li><%= link_to "2013-2014", controller: :news, action: :archive, year: 2013 %></li>
-                        </ul>
-                      </li>
-                    </ul>
-                </li>
-                <li><ul class="nav">
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Classifica
-                          <span id="sonounid" class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu touchprevent">
-                          <li><%= link_to "2014-2015", controller: :welcome, action: :result, year: 2014 %></li>
-                          <li><%= link_to "2013-2014", controller: :welcome, action: :result, year: 2013 %></li>
-                        </ul>
-                      </li>
-                    </ul>
+                <li>
+                  <%= link_to "News", controller: :news, action: :archive %></li>
+                <li>
+                  <%= link_to "Classifica", controller: :welcome, action: :result, year: 2014 %>
                 </li>
                 <li><%= link_to "Società", controller: :welcome, action: :societa  %></li>
-                <li><ul class="nav">
+<!--                 <li><ul class="nav">
                       <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Squadra
                           <span class="caret"></span>
@@ -80,7 +61,8 @@
                         </ul>
                       </li>
                     </ul>
-                </li>
+                </li> -->
+                <li><%= link_to "Squadra", controller: :welcome, action: :maschile  %></li>
                 <li><%= link_to "Gioca Con Noi", controller: :welcome, action: :gioca  %></li>
                 <li><%= link_to "Galleria", controller: :welcome, action: :galleria  %></li>
                 <li><%= link_to "Contatti", controller: :welcome, action: :contatti  %></li>

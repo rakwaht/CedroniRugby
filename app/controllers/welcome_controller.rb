@@ -14,7 +14,7 @@ class WelcomeController < ApplicationController
 	#end
 
 	def result
-		@year = params[:year]
+		@year = params[:year] ? params[:year] : 2014
 		@placement = Teams.where(:year => @year).order("point DESC")
 	end
 

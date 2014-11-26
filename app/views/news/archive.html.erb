@@ -30,5 +30,10 @@
  	<%= link_to controller: :news, action: :archive , :topic => "Societa" do%>
  		<div class="colored-link"><p>Societa(<%= @news_societa.count %>)</p></div>
  	<% end %>
+ 	<br>
+ 	<h5>Anni precedenti:</h5>
+ 	<%= link_to controller: :news, action: :archive, year: 2013 do%>
+ 		<div class="colored-link"><p>News 2013-2014</p></div>
+ 	<%end%>
  </div>
 </div>

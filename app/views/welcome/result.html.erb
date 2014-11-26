@@ -1,1 +1,14 @@
-<%= render 'classifica' %>
+<div class="row-fluid">
+ <div class="span10">
+  <div class="table_ranking">
+	<%= render 'classifica' %>
+  </div>
+ </div>
+ <div class="span2">
+		<h5>Anni precedenti:</h5>
+	 	<%= link_to controller: :welcome, action: :result, year: 2013 do%>
+	 		<div class="colored-link"><p>Classifica 2013-2014</p></div>
+	 	<%end%>
+ </div>
+</div>
+

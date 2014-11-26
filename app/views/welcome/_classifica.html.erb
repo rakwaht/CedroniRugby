@@ -1,9 +1,9 @@
 <%# render 'giornate' %>
 <br /><br /><br />
-<div class="classifica principale">
+<div class="classifica table_ranking">
  	 	<table class="table table-condensed">
  	 	  <caption>
- 	 	  	<h4>Classifica Campionato C2:</h4>
+ 	 	  	<h4>Classifica Campionato C2 <%= @year %>:</h4>
  	 	  	<span class="data">Aggiornata al: <%= @placement.first.created_at.strftime("%d-%m-%Y") %> </span>
  	 	  </caption>
 		  <thead>
@@ -24,17 +24,17 @@
 		  <tbody>
 		   	<% @placement.each_with_index do |p,i| %>
 			    <tr>
-			      <td><%= i+1 %></td>
-			      <td><%= p.name %></td>
-			      <td><%= p.games %></td>
-			      <td><%= p.point %></td>
-			      <td class="hidden-phone"><%= p.win %></td>
-			      <td class="hidden-phone"><%= p.lose %></td>
-			      <td class="hidden-phone"><%= p.tie %></td>
-			      <td class="hidden-phone"><%= p.point_made %></td>
-			      <td class="hidden-phone"><%= p.point_given %></td>
-			      <td class="hidden-phone"><%= p.try %></td>
-			      <td class="hidden-phone"><%= p.point_made - p.point_given%></td>
+			      <td class="table_cell_centered"><%= i+1 %></td>
+			      <td class="table_cell_centered"><%= p.name %></td>
+			      <td class="table_cell_centered"><%= p.games %></td>
+			      <td class="table_cell_centered"><%= p.point %></td>
+			      <td class="hidden-phone table_cell_centered"><%= p.win %></td>
+			      <td class="hidden-phone table_cell_centered"><%= p.lose %></td>
+			      <td class="hidden-phone table_cell_centered"><%= p.tie %></td>
+			      <td class="hidden-phone table_cell_centered"><%= p.point_made %></td>
+			      <td class="hidden-phone table_cell_centered"><%= p.point_given %></td>
+			      <td class="hidden-phone table_cell_centered"><%= p.try %></td>
+			      <td class="hidden-phone table_cell_centered"><%= p.point_made - p.point_given%></td>
 			    </tr>
 			<% end %>
 		  </tbody>
