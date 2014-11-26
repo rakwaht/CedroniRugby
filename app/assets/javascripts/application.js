@@ -50,4 +50,6 @@ $(".icon-arrow-left").click(function(){
 	}
 });
 
-$('body').on('touchstart.dropdown', '.dropdown-menu', function (e) { e.stopPropagation(); });
+$('#classifiche_btn').on('touchstart', function (e) {
+    alert(e);
+})
