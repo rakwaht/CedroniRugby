@@ -60,14 +60,14 @@
 								<span class="titolo colored-link"><%= n.title %></span>
 							<%end%>
 						</div>
-						<p>
-							<%= truncate(n.body, :length => 1400) %>
+						<div class="news_text post-header">
+							<%= truncate(n.body, :length => 1400).html_safe %>
 							<% if n.body.length > 1400 %>
 								<%= link_to controller: :news, action: :show, :news_id => n.id do %>
 									(continua)
 								<%end%>
 							<%end%>
-						</p>
+						</div>
 					</div>
 					<div class=”clearer”> </div>
 				</div>

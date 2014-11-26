@@ -10,7 +10,7 @@
 					&nbsp
 					<span class="titolo"><%= @news.title %></span>
 				</div>
-				<p><%= @news.body %></p>
+				<div class="news_text post-header"><%= @news.body.html_safe %></div>
 			</div>
 			<div class=”clearer”> </div>
 		</div>

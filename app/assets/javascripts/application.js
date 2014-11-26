@@ -49,3 +49,5 @@ $(".icon-arrow-left").click(function(){
 		$("#"+(id-1)).removeClass("invisibile").addClass("attivo");
 	}
 });
+
+$('.dropdown-menu').on('touchstart.dropdown.data-api', function(e) { e.stopPropagation() });

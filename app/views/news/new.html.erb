@@ -1,6 +1,20 @@
 <div class="well">
 	<h4>Crea News:</h4>
-
+	<div class="accordion" id="accordion2">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                      Consigli tipografici
+                    </a>
+            </div>
+            <div id="collapseOne" class="accordion-body collapse" style="height: 0px;">
+                <div class="accordion-inner">
+                 		<p><%=h "Perle di HTML: per andare a capo scrivi <br> senza le virgolette, per fare un pezzo di testo testo in grassetto <b>Sono un testo in grassetto</b>, per fare un testo in italico scrivi <i>sono un testo in italico</i>. Per altre nozioni di HTML andare qui: http://lmgtfy.com/?q=html+tag+formattazione+testo" %>
+						</p>
+                </div>
+            </div>
+        </div>
+    </div>
 	<%= render 'form' %>
 
 </div>
