@@ -50,4 +50,4 @@ $(".icon-arrow-left").click(function(){
 	}
 });
 
-$('.dropdown-menu').on('touchstart.dropdown.data-api', function(e) { e.stopPropagation() });
+$('body').on('touchstart.dropdown', '.dropdown-menu', function (e) { e.stopPropagation(); });
