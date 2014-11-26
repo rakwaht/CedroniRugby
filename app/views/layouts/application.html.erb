@@ -59,10 +59,10 @@
                 <li><ul class="nav">
                       <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Classifica
-                          <span class="caret"></span>
+                          <span id="sonounid" class="caret"></span>
                         </a>
                         <ul class="dropdown-menu touchprevent">
-                          <li id="sonounid"><%= link_to "2014-2015", controller: :welcome, action: :result, year: 2014 %></li>
+                          <li><%= link_to "2014-2015", controller: :welcome, action: :result, year: 2014 %></li>
                           <li><%= link_to "2013-2014", controller: :welcome, action: :result, year: 2013 %></li>
                         </ul>
                       </li>
