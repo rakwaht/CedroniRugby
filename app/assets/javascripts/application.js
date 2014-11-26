@@ -50,6 +50,6 @@ $(".icon-arrow-left").click(function(){
 	}
 });
 
-$('.touchprevent').on('touchstart', function (e) {
+$('#sonounid').on('touchstart', function (e) {
     alert(e);
 })
