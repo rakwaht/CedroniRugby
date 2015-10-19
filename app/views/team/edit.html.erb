@@ -2,15 +2,15 @@
 	<h1>Edit Team</h1>
 	<%= form_for :team, url: {controller: :team, action: :edit_confirm, :team_id => @team.id} do |f| %>
 	  <p>Nome squadra:  <%= f.text_field :name, placeholder: "Nome.." %></p>
-	  <p>Punti:  <%= f.text_field :point, placeholder: "Punti.." %></p>
-	  <p>Giornate:  <%= f.text_field :games, placeholder: "Giornate.." %></p>
-	  <p>Vinte:  <%= f.text_field :win, placeholder: "Vinte.." %></p>
-	  <p>Perse:  <%= f.text_field :lose, placeholder: "Perse.." %></p>
-	  <p>Neutre:  <%= f.text_field :tie, placeholder: "Neutre.." %></p>
-	  <p>Punti Fatti:  <%= f.text_field :point_made, placeholder: "Punti fatti.." %></p>
-	  <p>Punti Subiti:  <%= f.text_field :point_given, placeholder: "Punti subiti.." %></p>
-	  <p>Mete:  <%= f.text_field :try, placeholder: "Mete.." %></p>
-	  <p>Anno:  <%= f.text_field :year, placeholder: "2014 o 2013" %></p>
+	  <p>Punti:  <%= f.number_field :point, placeholder: "Punti..", min: 0, max: 999 %></p>
+	  <p>Giornate:  <%= f.number_field :games, placeholder: "Giornate..", min: 0, max: 999 %></p>
+	  <p>Vinte:  <%= f.number_field :win, placeholder: "Vinte..", min: 0, max: 999 %></p>
+	  <p>Perse:  <%= f.number_field :lose, placeholder: "Perse..", min: 0, max: 999 %></p>
+	  <p>Neutre:  <%= f.number_field :tie, placeholder: "Neutre..", min: 0, max: 999 %></p>
+	  <p>Punti Fatti:  <%= f.number_field :point_made, placeholder: "Punti fatti..", min: 0, max: 9999 %></p>
+	  <p>Punti Subiti:  <%= f.number_field :point_given, placeholder: "Punti subiti..", min: 0, max: 9999 %></p>
+	  <p>Mete:  <%= f.number_field :try, placeholder: "Mete..", min: 0, max: 9999 %></p>
+  	  <p>Anno: <%= f.select :year, options_for_select(["2015","2014","2013"])%></p>
 	  <div class="actions">
 	    <%= f.submit 'Save Team', :class => 'btn btn-success'%>
 		<div class="btn"><%= link_to 'Back', controller: :welcome, action: :admin %></div>

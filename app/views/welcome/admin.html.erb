@@ -8,11 +8,34 @@
 <div class="post-header">
  <div class="tabbable"> <!-- Only required for left/right tabs -->
   <ul class="nav nav-tabs">
-    <li class="active"><a href="#tab1" data-toggle="tab">2014-2015</a></li>
-    <li><a href="#tab2" data-toggle="tab">2013-2014</a></li>
+    <li class="active"><a href="#tab1" data-toggle="tab">2015-2016</a></li>
+    <li><a href="#tab2" data-toggle="tab">2014-2015</a></li>
+    <li><a href="#tab3" data-toggle="tab">2013-2014</a></li>
   </ul>
   <div class="tab-content">
-    <div class="tab-pane active" id="tab1">
+  	<div class="tab-pane active" id="tab1">
+        <h4>News 2015-2016:</h4>
+        <% if @news2015.count == 0 %>
+			<div class="alert alert-error principale">
+		      <h2><strong><center>Non sono presenti news!</center></strong></h2>
+		    </div>
+		 <% else %>
+			<%@news2015.each do |n| %>
+					<span class="data"><%=n.created_at.strftime("%Y-%m-%d") %></span>
+					&nbsp
+					<%= link_to controller: :news, action: :show, :news_id => n.id do %>
+						<span class="titolo"><%= n.title %></span>
+					<%end%>
+					&nbsp;
+					<span>
+						<%= link_to "Edit", controller: :news, action: :edit , :news_id => n.id %>
+						<%= link_to "Delete", controller: :news, action: :delete , :news_id => n.id %>
+					</span>
+					<br />
+			<% end %>
+		 <% end %>
+    </div>
+    <div class="tab-pane" id="tab2">
         <h4>News 2014-2015:</h4>
         <% if @news2014.count == 0 %>
 			<div class="alert alert-error principale">
@@ -34,7 +57,7 @@
 			<% end %>
 		 <% end %>
     </div>
-    <div class="tab-pane" id="tab2">
+    <div class="tab-pane" id="tab3">
         <h4>News 2013-2014:</h4>
         <% if @news2013.count == 0 %>
 			<div class="alert alert-error principale">
@@ -78,11 +101,59 @@
 <div class="post-header">
  <div class="tabbable"> <!-- Only required for left/right tabs -->
   <ul class="nav nav-tabs">
-    <li class="active"><a href="#tab4" data-toggle="tab">2014-2015</a></li>
-    <li><a href="#tab3" data-toggle="tab">2013-2014</a></li>
+    <li class="active"><a href="#tab4" data-toggle="tab">2015-2016</a></li>
+    <li><a href="#tab5" data-toggle="tab">2013-2014</a></li>
+    <li><a href="#tab6" data-toggle="tab">2013-2014</a></li>
   </ul>
   <div class="tab-content">
     <div class="tab-pane active" id="tab4">
+        <h4>Classifica 2015-2016:</h4>
+		<div class="classifica principale">
+	 	 	<table class="table table-condensed">
+	 	 	  <caption>
+	 	 	  </caption>
+			  <thead>
+			    <tr>
+			      <th>Pos.</th>
+			      <th>Squadra</th>
+			      <th>G.</th>
+			      <th>Pt.</th>
+			      <th>Vinte</th>
+			      <th>Perse</th>
+			      <th>Neutre</th>
+			      <th>Punti Fatti</th>
+			      <th>Punti Subiti</th>
+			      <th>Mete</th>
+			      <th></th>
+			      <th></th>
+			    </tr>
+			  </thead>
+			  <tbody>
+				<% @placement2015.each_with_index do |p,i| %>
+				    <tr>
+				      <td><%= i+1 %></td>
+				      <td><%= p.name %></td>
+				      <td><%= p.games %></td>
+				      <td><%= p.point %></td>
+				      <td><%= p.win %></td>
+				      <td><%= p.lose %></td>
+				      <td><%= p.tie %></td>
+				      <td><%= p.point_made %></td>
+				      <td><%= p.point_given %></td>
+				      <td><%= p.try %></td>
+				      <td>
+				      	<%= link_to "Edit", controller: :team, action: :edit , :team_id => p.id%>
+				      </td>
+				      <td>
+				      	<%=link_to "Delete", controller: :team, action: :delete, :team_id=>p.id%>
+				      </td>
+				    </tr>
+				<% end %>
+			  </tbody>
+			</table>
+	 	</div>
+    </div>
+    <div class="tab-pane" id="tab5">
         <h4>Classifica 2014-2015:</h4>
 		<div class="classifica principale">
 	 	 	<table class="table table-condensed">
@@ -129,7 +200,7 @@
 			</table>
 	 	</div>
     </div>
-    <div class="tab-pane" id="tab3">
+    <div class="tab-pane" id="tab6">
         <h4>Classifica 2013-2014:</h4>
 		<div class="classifica principale">
 	 	 	<table class="table table-condensed">

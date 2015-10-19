@@ -6,6 +6,9 @@
  </div>
  <div class="span2">
 		<h5>Anni precedenti:</h5>
+		<%= link_to controller: :welcome, action: :result, year: 2014 do%>
+	 		<div class="colored-link"><p>Classifica 2014-2015</p></div>
+	 	<%end%>
 	 	<%= link_to controller: :welcome, action: :result, year: 2013 do%>
 	 		<div class="colored-link"><p>Classifica 2013-2014</p></div>
 	 	<%end%>

@@ -16,7 +16,7 @@ class NewsController < ApplicationController
 	def archive
 		@topic = params[:topic]
 		@year = params[:year]
-		@year = @year ? @year : 2014
+		@year = @year ? @year : 2015
 		@all_news = News.where(:year => @year).order("created_at DESC")
 		@news_maschile = News.where(:topic => "Maschile").where(:year => @year).order("created_at DESC")
 		@news_femminile = News.where(:topic => "Femminile").where(:year => @year).order("created_at DESC")
