@@ -3,7 +3,7 @@
 <div class="classifica table_ranking">
  	 	<table class="table table-condensed">
  	 	  <caption>
- 	 	  	<h4>Classifica Campionato <%= @year %>:</h4>
+ 	 	  	<h4>Classifica Campionato <%= @year %> / <%= (@year.to_i + 1).to_s %>:</h4>
  	 	  	<span class="data">Aggiornata al: <%= @placement.first.created_at.strftime("%d-%m-%Y") %> </span>
  	 	  </caption>
 		  <thead>

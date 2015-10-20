@@ -2,7 +2,7 @@
  <div class="span10">
   <div class="principale">
 	<div class="post-header">
-		<h2>Archivio News <%= @year %>:</h2>
+		<h2>Archivio News <%= @year %> / <%= (@year.to_i + 1).to_s %>:</h2>
 	</div>
 		<% if @topic.nil? %>
 			<%= render 'all' %>
