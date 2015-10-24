@@ -146,13 +146,17 @@ div.clearer{clear: left}
 }
 
 .margine-lati{
-	margin-left: 2%;
-	margin-right: 2%;
+	margin-left: calc( 100% - 960px );
+	margin-right: calc( 100% - 960px );
 }
 
 .indexCarousel > img{
 	width: 100%;
   	max-height: 350px;
+}
+
+.personalizeCarousel{
+	max-width: 960px;
 }
 
 .imageGallery{
